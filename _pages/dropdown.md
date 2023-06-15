@@ -6,7 +6,7 @@ nav_order: 6
 dropdown: true
 children: 
     - title: Atiyah, Mcdonald
-      permalink: /Atiyah, Mcdonald/
+      permalink: AtiyahMcdonald
     #- title: divider
     #- title: projects
     #  permalink: /projects/
