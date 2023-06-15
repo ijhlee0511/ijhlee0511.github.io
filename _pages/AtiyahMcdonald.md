@@ -5,4 +5,4 @@ permalink: /AtiyahMcdonald/
 subtitle:
 ---
 
-I will upload solutions of exercies in commutative algebra textbook written by Atiyah and Macdonald.
+I will upload the solutions to the exercises in the commutative algebra textbook written by Atiyah and Macdonald here.
