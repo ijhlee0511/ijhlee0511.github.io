@@ -5,7 +5,7 @@ nav: true
 nav_order: 6
 dropdown: true
 children: 
-    - title: Atiyah & Mcdonald
+    - title: Atiyah & MacDonald
       permalink: AtiyahMcdonald
     #- title: divider
     #- title: projects

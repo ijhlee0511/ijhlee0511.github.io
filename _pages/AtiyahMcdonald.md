@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Atiyah & Macdonald
+title: Atiyah & MacDonald
 permalink: /AtiyahMcdonald/
 subtitle:
 ---
