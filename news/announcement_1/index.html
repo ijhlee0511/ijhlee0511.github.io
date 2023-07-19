@@ -179,7 +179,9 @@
     <!-- MathJax -->
   <script type="text/javascript">
     window.MathJax = {
+      loader: {load: ['[tex]/mathtools']},
       tex: {
+        packages: {'[+]': ['mathtools']},
         tags: 'ams'
       }
     };
