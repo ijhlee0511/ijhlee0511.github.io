@@ -140,8 +140,8 @@ related_blog_posts:
 giscus:
   repo: ijhlee0511/ijhlee0511.github.io     # <your-github-user-name>/<your-github-repo-name>
   repo_id: R_kgDOJqjmWQ
-  category: Comments             # name of the category under which discussions will be created
-  category_id: DIC_kwDOA5PmLc4CTBt6
+  category: General             # name of the category under which discussions will be created
+  category_id: DIC_kwDOJqjmWc4CX-qZ
   mapping: title                 # identify discussions by post title
   strict: 1                      # use strict identification mode
   reactions_enabled: 1           # enable (1) or disable (0) emoji reactions
