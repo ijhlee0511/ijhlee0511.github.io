@@ -11,9 +11,12 @@ These are solutions to Exercise problems of “Introduction to Commutative Algeb
 If you find any typos or errors in this solution, please leave a comment in the section below (GitHub account required)
 or contact me via email at [ijhlee0511@gmail.com](mailto:ijhlee0511@gmail.com) or [ijhlee0511@kaist.ac.kr](mailto:ijhlee0511@kaist.ac.kr)
 
-(Currently, I uploaded a solution for Chapter 1 only. The rest of the solutions will be uploaded later.)
+(Currently, I uploaded a solution for Chapter 1 and 2 only. The rest of the solutions will be uploaded later.)
 
-[Solution for Chapter 1 (last change: 19 Jul. 2023)](/assets/pdf/JHLee%20AM%20Solution%20Chapter1.pdf)
+[Solution for Chapter 1 (last change: 23 Aug. 2023)](/assets/AMsolutions/JHLee AM Solution Chapter1.pdf)
+
+[Solution for Chapter 2 (last change: 23 Aug. 2023)](/assets/AMsolutions/JHLee AM Solution Chapter2.pdf)
+
 
 <script src="https://giscus.app/client.js"
         data-repo="ijhlee0511/ijhlee0511.github.io"
