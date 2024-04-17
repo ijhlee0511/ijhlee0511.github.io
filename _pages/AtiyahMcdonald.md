@@ -13,9 +13,9 @@ or contact me via email at [ijhlee0511@gmail.com](mailto:ijhlee0511@gmail.com) o
 
 (Currently, I uploaded a solution for Chapter 1 and 2 only. The rest of the solutions will be uploaded later.)
 
-[Solution for Chapter 1 (last change: 23 Aug. 2023)](/assets/AMsolutions/JHLee AM Solution Chapter1.pdf)
+[Solution for Chapter 1 (last change: 18 Apr. 2024)](/assets/AMsolutions/JHLee AM Solution Chapter1.pdf)
 
-[Solution for Chapter 2 (last change: 23 Aug. 2023)](/assets/AMsolutions/JHLee AM Solution Chapter2.pdf)
+[Solution for Chapter 2 (last change: 18 Apr. 2024)](/assets/AMsolutions/JHLee AM Solution Chapter2.pdf)
 
 
 <script src="https://giscus.app/client.js"
