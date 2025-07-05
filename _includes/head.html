@@ -37,3 +37,20 @@
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/dark_mode.js' | relative_url }}"></script>
     {% endif %}
+
+    <!-- KaTeX CSS & JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" …>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" …></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" …></script>
+
+<!-- Allow leading/trailing spaces in $…$ -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$", right: "$", display: false, ignoreSpaces: true},
+        {left: "$$", right: "$$", display: true}
+      ]
+    });
+  });
+</script>

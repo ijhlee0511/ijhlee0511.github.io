@@ -5,7 +5,6 @@
     {%- include head.html %}
 
     {% include scripts/jquery.html %}
-    {% include scripts/mathjax.html %}
     <!-- Distill js -->
     <script src="{{ '/assets/js/distillpub/template.v2.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/distillpub/transforms.v2.js' | relative_url }}"></script>
@@ -16,6 +15,16 @@
       {{ page._styles }}
     </style>
     {%- endif %}
+
+  {% if page.enable_math or site.enable_math %}
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@{{ site.katex.version }}/dist/katex.min.css"
+    integrity="sha384-…"
+    crossorigin="anonymous"
+  >
+  {% endif %}
+
   </head>
 
   <d-front-matter>
@@ -113,5 +122,18 @@
     {% include scripts/bootstrap.html %}
     {% include scripts/analytics.html %}
     {% include scripts/progressBar.html %}
+
+    {% if page.enable_math or site.enable_math %}
+  <!-- KaTeX core JS -->
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@{{ site.katex.version }}/dist/katex.min.js"
+          integrity="sha384-…"
+          crossorigin="anonymous">
+  </script>
+
+  {% if page.enable_math or site.enable_math %}
+    {% include scripts/katex.html %}
+  {% endif %}
+
   </body>
 </html>

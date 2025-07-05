@@ -191,9 +191,10 @@ latest_posts:
 
 # Markdown and syntax highlight
 markdown: kramdown
-highlighter: rouge
 kramdown:
-  input: GFM
+  input: kramdown         # to get full \(...\) support
+  math_engine: katex
+  math_engine_opts: {}
   syntax_highlighter_opts:
     css_class: 'highlight'
     span:
@@ -201,6 +202,7 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
+
 
 # Includes & excludes
 include: ['_pages']
@@ -214,8 +216,8 @@ keep_files:
   - .nojekyll
   - .git
 
-# Plug-ins
 plugins:
+  - kramdown-math-katex    # server‑side KaTeX math rendering
   - jekyll-archives
   - jekyll-diagrams
   - jekyll-email-protect
@@ -224,11 +226,13 @@ plugins:
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
-  - jekyll/scholar
+  - jekyll-scholar
   - jekyll-sitemap
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+  - webrick                # if you need it locally
+
 
 # Sitemap settings
 defaults:
