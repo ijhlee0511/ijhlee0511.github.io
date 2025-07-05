@@ -49,6 +49,29 @@
     <script src="/assets/js/dark_mode.js"></script>
     
 
+    <!-- KaTeX CSS & JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"></script>
+
+<!-- Allow leading/trailing spaces in $…$ -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$", right: "$", display: false, ignoreSpaces: true},
+        {left: "$$", right: "$$", display: true}
+      ]
+    });
+  });
+</script>
+
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@/dist/katex.min.css" integrity="sha384-…" crossorigin="anonymous">
+  
+
+
   </head>
 
   <!-- Body -->
@@ -163,6 +186,12 @@ majoring in mathematics.</p>
               <table class="table table-sm table-borderless">
               
                 <tr>
+                  <th scope="row">Jul 4, 2025</th>
+                  <td>
+                    <a class="news-title" href="/blog/2025/NT-post-1/">Algebraically closed complete field may not have a complete image in $\mathbb{R}$ under its absolute value</a>
+                  </td>
+                </tr>
+                <tr>
                   <th scope="row">Jul 19, 2023</th>
                   <td>
                     <a class="news-title" href="/blog/2023/LA-post-1/">Natural Isomorphisms with Non-Natural-Looking Inverses</a>
@@ -200,7 +229,7 @@ majoring in mathematics.</p>
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2024 Jaehyeon  Lee. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+        © Copyright 2025 Jaehyeon  Lee. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
 
       </div>
     </footer>
@@ -233,19 +262,6 @@ majoring in mathematics.</p>
     
   <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
   <script async src="https://badge.dimensions.ai/badge.js"></script>
-
-    <!-- MathJax -->
-  <script type="text/javascript">
-    window.MathJax = {
-      loader: {load: ['[tex]/mathtools']},
-      tex: {
-        packages: {'[+]': ['mathtools']},
-        tags: 'ams'
-      }
-    };
-  </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
     
     
@@ -326,6 +342,13 @@ majoring in mathematics.</p>
     return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
   }
 </script>
+
+
+
+    
+      <!-- KaTeX core CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
+    
 
   </body>
 </html>
