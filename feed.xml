@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ijhlee0511.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ijhlee0511.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-11T01:50:46+00:00</updated><id>https://ijhlee0511.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ijhlee0511.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ijhlee0511.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-11T02:07:50+00:00</updated><id>https://ijhlee0511.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">On the Characteristic of a Ring</title><link href="https://ijhlee0511.github.io/blog/2025/A-post-1/" rel="alternate" type="text/html" title="On the Characteristic of a Ring" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-11T00:00:00+00:00</updated><id>https://ijhlee0511.github.io/blog/2025/A-post-1</id><content type="html" xml:base="https://ijhlee0511.github.io/blog/2025/A-post-1/"><![CDATA[<p>In this post, we will see that the usual definition of the characteristic of a ring obscures its true nature, and explain why another equivalent characterization is conceptually more useful.</p>
 
 <p>Throughout this discussion, every ring has a multiplicative identity $1$, and every ring homomorphism $\varphi: A \to B$ must satisfy $\varphi(1_A) = 1_B$.
@@ -33,7 +33,7 @@ It is straightforward to check that the following fact holds, using the assumpti
 
 <p><strong>Remark.</strong> The fact says that $\mathbb{Z}$ is the <a href="https://en.wikipedia.org/wiki/Initial_and_terminal_objects">initial object</a> of the category of rings.</p>
 
-<p>One can easily check the following definition is equivalent with the original usual definition of the characteristic of a ring.</p>
+<p>One can easily check the following definition is equivalent to the original usual definition of the characteristic of a ring.</p>
 
 <p><strong>(New) Definition.</strong> The <em>characteristic</em> of a ring $A$, denoted by $\operatorname{char}(A)$, is the non-negative generator of the unique ring homomorphism $\mathbb{Z} \to A$.</p>
 
@@ -43,17 +43,17 @@ This definition is not only conceptually useful, but also practical in actual pr
 The following is a new proof of Proposition 1.</p>
 
 <p><em>New proof of Proposition 1.</em> Consider the unique ring homomorphism $\mathbb{Z} \to F$.
-Since any subring of $F$ is an integral domain, the kernel of the map must be prime, so a characteristic is $0$ or a prime $p$.
+Since any subring of $F$ is an integral domain, the kernel of the map must be prime, so the characteristic is $0$ or a prime $p$.
 If $n \cdot 1_F = 0$ for $n &gt; 0$, then the ideal $(n)$ must be contained in $(p)$, implying that $p \mid n$.$\qquad\square$</p>
 
-<p>As you can see, the proof becomes more systematic and is beautifully described in the langauge of ideal theory.
+<p>As you can see, the proof becomes more systematic and is beautifully described in the language of ideal theory.
 This approach can be applied to other problems.</p>
 
 <p><strong>Problem 1.</strong> Suppose $((A_i)_{i \in I}, (f_{ij})_{i \le j \in I})$ is an <a href="https://en.wikipedia.org/wiki/Inverse_limit">inverse system</a> of commutative rings.
 Suppose for each $i \in I$, the ring $A_i$ has a positive characteristic.
 Then what can we say about the characteristic of its inverse limit?</p>
 
-<p><em>Solution.</em> Consider the unique ring homomrophism $\varphi_i : \mathbb{Z} \to A_i$.
+<p><em>Solution.</em> Consider the unique ring homomorphism $\varphi_i : \mathbb{Z} \to A_i$.
 Then the characteristic $n_i$ of $A_i$ is precisely the kernel $n_i\mathbb{Z}$ of $\varphi_i$.
 Hence, we get an exact sequence of $\mathbb{Z}$-modules</p>
 
@@ -78,7 +78,11 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 <p>Thus, the characteristic of $\displaystyle\lim_{\underset{I}{\longleftarrow}} A_i$ is the non-negative generator of $\displaystyle\lim_{\underset{I}{\longleftarrow}} n_i\mathbb{Z}$.
 Note that $n_j\mathbb{Z} \le n_i\mathbb{Z}$ whenever $i \le j$; i.e., $n_i$ must divide $n_j$.
 Thus, if $n_i$ is unbounded, then $\displaystyle\lim_{\underset{I}{\longleftarrow}} n_i\mathbb{Z} = 0$.
-Otherwise, $n_i$ is eventually stablized to their least common multiplice $L$, and it is precisely the characteristic of $\displaystyle\lim_{\underset{I}{\longleftarrow}} A_i$. $\quad\square$</p>
+Otherwise, $n_i$ is eventually stabilized to their least common multiple $L$, and it is precisely the characteristic of $\displaystyle\lim_{\underset{I}{\longleftarrow}} A_i$. $\quad\square$</p>
+
+<p><strong>Remark.</strong> It might sound surprising that the inverse limit of rings of positive characteristic can have characteristic $0$.
+However, there is a well-known example.
+For a fixed prime $p$, consider the inverse system $\mathbb{Z}/p^i\mathbb{Z}$ for $i \ge 1$, where $\mathbb{Z}/p^j\mathbb{Z} \to \mathbb{Z}/p^i\mathbb{Z}$ is the natural quotient by $(p^{j-i})\left(\mathbb{Z}/p^j\mathbb{Z}\right)$ for $j &gt; i$. The inverse limit is the ring of $p$-adic integer $\mathbb{Z}_p$, which is known to have characteristic $0$.</p>
 
 <p>We can use the same strategy for the dual problem.</p>
 
@@ -86,8 +90,8 @@ Otherwise, $n_i$ is eventually stablized to their least common multiplice $L$, a
 Suppose for each $i \in I$, the ring $B_i$ has a positive characteristic.
 Then what can we say about the characteristic of its direct limit?</p>
 
-<p><em>Solution.</em> Consider the unique ring homomrophism $\varphi_i : \mathbb{Z} \to B_i$.
-Then the characteristic $m_i$ of $B_i$ is precisely the kernel $b_i\mathbb{Z}$ of $\varphi_i$.
+<p><em>Solution.</em> Consider the unique ring homomorphism $\varphi_i : \mathbb{Z} \to B_i$.
+Then the characteristic $m_i$ of $B_i$ is precisely the kernel $m_i\mathbb{Z}$ of $\varphi_i$.
 Hence, we get an exact sequence of $\mathbb{Z}$-modules</p>
 
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>0</mn><mo>→</mo><msub><mi>m</mi><mi>i</mi></msub><mi mathvariant="double-struck">Z</mi><mo>→</mo><mi mathvariant="double-struck">Z</mi><mo>→</mo><msub><mi>B</mi><mi>i</mi></msub><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">0 \to m_i\mathbb{Z} \to \mathbb{Z} \to B_i.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathbb">Z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">Z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span>
@@ -110,7 +114,7 @@ Hence, we get an exact sequence of $\mathbb{Z}$-modules</p>
 
 <p>Thus, the characteristic of $\displaystyle\lim_{\underset{I}{\longrightarrow}} B_i$ is the non-negative generator of $\displaystyle\lim_{\underset{I}{\longrightarrow}} m_i\mathbb{Z}$.
 Note that $m_j\mathbb{Z} \ge m_i\mathbb{Z}$ whenever $i \le j$; i.e., $m_j$ must divide $m_i$.
-Thus, $m_i$ must be eventually stablized to their greatest common divisor $D$, and it is precisely the characteristic of $\displaystyle\lim_{\underset{I}{\longrightarrow}} B_i$. $\quad\square$</p>
+Thus, $m_i$ must be eventually stabilized to their greatest common divisor $D$, and it is precisely the characteristic of $\displaystyle\lim_{\underset{I}{\longrightarrow}} B_i$. $\quad\square$</p>
 
 <p><br /></p>
 
