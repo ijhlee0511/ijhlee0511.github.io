@@ -22,3 +22,11 @@ $(document).ready(function() {
             .insertRule(".panel {border-color: var(--global-divider-color) !important;}");
     });
 })
+
+/* Disable Distill’s KaTeX & run MathJax AFTER Distill finishes -----------*/
+window.addEventListener('load', () => {
+  if (window.Distill && Distill.katex) {
+    Distill.katex.render = () => {};     // Distill 수식 변환 완전 무력화
+  }
+  MathJax.typesetPromise && MathJax.typesetPromise();  // 한 번만 typeset
+});

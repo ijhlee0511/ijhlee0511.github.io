@@ -1,0 +1,29 @@
+<script>
+window.MathJax = {
+  loader: {load: ['[tex]/ams', '[tex]/mathtools', '[tex]/amscd', '[tex]/braket', '[tex]/color']},
+  tex: {
+    // Delimiters for inline and display math
+    inlineMath:  [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    
+    // Packages are automatically loaded from this list
+    packages: {'[+]': [
+      'ams', 'mathtools', 'amscd', 'braket', 'color'
+    ]},
+    
+    // Your custom macros
+    macros: {
+      Rbb:  '\\mathbb{R}',
+      Zbb:  '\\mathbb{Z}'
+    }
+  },
+  options: {
+    // Prevents MathJax from processing content within these HTML tags
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>

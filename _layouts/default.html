@@ -8,16 +8,6 @@
   {%- endif -%}
   {% include head.html %}
 
-  {% if page.enable_math or site.enable_math %}
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex@{{ site.katex.version }}/dist/katex.min.css"
-    integrity="sha384-…"
-    crossorigin="anonymous"
-  >
-  {% endif %}
-
-
   </head>
 
   <!-- Body -->
@@ -68,11 +58,6 @@
     {% include scripts/badges.html %}
     {% include scripts/analytics.html %}
     {% include scripts/progressBar.html %}
-
-
-    {% if page.enable_math or site.enable_math %}
-      {% include scripts/katex.html %}
-    {% endif %}
 
   </body>
 </html>

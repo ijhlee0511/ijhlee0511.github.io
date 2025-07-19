@@ -193,7 +193,7 @@ latest_posts:
 markdown: kramdown
 kramdown:
   input: kramdown         # to get full \(...\) support
-  math_engine: katex
+  math_engine: mathjax
   math_engine_opts: {}
   syntax_highlighter_opts:
     css_class: 'highlight'
@@ -217,7 +217,6 @@ keep_files:
   - .git
 
 plugins:
-  - kramdown-math-katex    # server‑side KaTeX math rendering
   - jekyll-archives
   - jekyll-diagrams
   - jekyll-email-protect
