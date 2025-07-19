@@ -49,32 +49,38 @@
     <script src="/assets/js/dark_mode.js"></script>
     
 
-    <!-- KaTeX CSS & JS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" …>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" …></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" …></script>
 
-<!-- Allow leading/trailing spaces in $…$ -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: "$", right: "$", display: false, ignoreSpaces: true},
-        {left: "$$", right: "$$", display: true}
-      ]
-    });
-  });
+    
+      <script>
+window.MathJax = {
+  loader: {load: ['[tex]/ams', '[tex]/mathtools', '[tex]/amscd', '[tex]/braket', '[tex]/color']},
+  tex: {
+    // Delimiters for inline and display math
+    inlineMath:  [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    
+    // Packages are automatically loaded from this list
+    packages: {'[+]': [
+      'ams', 'mathtools', 'amscd', 'braket', 'color'
+    ]},
+    
+    // Your custom macros
+    macros: {
+      Rbb:  '\\mathbb{R}',
+      Zbb:  '\\mathbb{Z}'
+    }
+  },
+  options: {
+    // Prevents MathJax from processing content within these HTML tags
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
 </script>
 
-
-  
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/katex@/dist/katex.min.css"
-    integrity="sha384-…"
-    crossorigin="anonymous"
-  >
-  
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+    
 
 
   </head>
@@ -172,7 +178,7 @@
       </h3>
       <p>In this post, we will see that the usual definition of the characteristic of a ring obscures its true nature, and explain why another equivalent characterization is conceptually more useful.</p>
       <p class="post-meta">
-        12 min read &nbsp; &middot; &nbsp;
+        6 min read &nbsp; &middot; &nbsp;
         July 11, 2025
       </p>
       <p class="post-tags">
@@ -204,7 +210,7 @@
       </h3>
       <p>In this post, we will see that the image of $\mathbb{C}_p$, the complete algebraic closure of $\mathbb{Q}_p$, has a non-complete image in $\mathbb{R}$.</p>
       <p class="post-meta">
-        14 min read &nbsp; &middot; &nbsp;
+        6 min read &nbsp; &middot; &nbsp;
         July 4, 2025
       </p>
       <p class="post-tags">
@@ -245,7 +251,7 @@
       </h3>
       <p>In this post, we will talk about canonical isomorprhisms with non-canonical-looking inverses related to tensor products in linear algebra.</p>
       <p class="post-meta">
-        18 min read &nbsp; &middot; &nbsp;
+        5 min read &nbsp; &middot; &nbsp;
         July 19, 2023
       </p>
       <p class="post-tags">
@@ -406,16 +412,6 @@
   }
 </script>
 
-
-
-    
-      <!-- KaTeX core CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
-  crossorigin="anonymous"
-/>
-    
 
   </body>
 </html>
