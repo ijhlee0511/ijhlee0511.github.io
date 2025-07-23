@@ -1,0 +1,46 @@
+{% comment %}  _layouts/bib_post.html — URL·DOI 링크 처리  {% endcomment %}
+
+{%- if entry.label -%}
+  <span class="bib-label">[{{ entry.label }}]</span>
+{%- endif -%}
+
+{%- assign ref = reference -%}
+
+{%- comment %} --- DOI를 링크로 (치환 우선, 중복 방지) --- {% endcomment %}
+{%- if entry.doi -%}
+  {%- assign doi_full   = 'https://doi.org/' | append: entry.doi -%}
+  {%- assign doi_anchor = '<a href="' | append: doi_full
+                           | append: '" target="_blank" rel="noopener">'
+                           | append: doi_full | append: '</a>' -%}
+  {%- assign doi_plain  = 'doi:' | append: entry.doi -%}
+
+  {%- if ref contains doi_plain -%}
+    {%- assign ref = ref | replace: doi_plain, doi_anchor -%}
+  {%- elsif ref contains doi_full -%}
+    {%- assign ref = ref | replace: doi_full, doi_anchor -%}
+  {%- else -%}
+    {%- assign ref = ref | append: '. ' | append: doi_anchor -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment %} --- URL을 링크로 (치환 우선) --- {% endcomment %}
+{%- assign url_raw = entry.url | default: entry.URL -%}
+{%- if url_raw -%}
+  {%- assign url_anchor = '<a href="' | append: url_raw
+                           | append: '" target="_blank" rel="noopener">'
+                           | append: url_raw | append: '</a>' -%}
+  {%- if ref contains url_raw -%}
+    {%- assign ref = ref | replace: url_raw, url_anchor -%}
+  {%- else -%}
+    {%- assign ref = ref | append: '. ' | append: url_anchor -%}
+  {%- endif -%}
+{%- endif -%}
+
+{{ ref | raw }}
+
+{%- if site.badges -%}
+  <span class="badges">
+    {%- if site.badges.altmetric_badge %}{{ entry.altmetric_badge }}{% endif -%}
+    {%- if site.badges.dimensions_badge %}{{ entry.dimensions_badge }}{% endif -%}
+  </span>
+{%- endif -%}
