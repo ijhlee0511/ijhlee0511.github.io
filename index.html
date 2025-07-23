@@ -66,9 +66,122 @@ window.MathJax = {
     
     // Your custom macros
     macros: {
-      Rbb:  '\\mathbb{R}',
-      Zbb:  '\\mathbb{Z}'
-    }
+  /* — blackboard-bold — */
+  Abb: '\\mathbb{A}',
+  Bbb: '\\mathbb{B}',
+  Cbb: '\\mathbb{C}',
+  Dbb: '\\mathbb{D}',
+  Ebb: '\\mathbb{E}',
+  Fbb: '\\mathbb{F}',
+  Gbb: '\\mathbb{G}',
+  Hbb: '\\mathbb{H}',
+  Ibb: '\\mathbb{I}',
+  Jbb: '\\mathbb{J}',
+  Kbb: '\\mathbb{K}',
+  Lbb: '\\mathbb{L}',
+  Mbb: '\\mathbb{M}',
+  Nbb: '\\mathbb{N}',
+  Obb: '\\mathbb{O}',
+  Pbb: '\\mathbb{P}',
+  Qbb: '\\mathbb{Q}',
+  Rbb: '\\mathbb{R}',
+  Sbb: '\\mathbb{S}',
+  Tbb: '\\mathbb{T}',
+  Ubb: '\\mathbb{U}',
+  Vbb: '\\mathbb{V}',
+  Wbb: '\\mathbb{W}',
+  Xbb: '\\mathbb{X}',
+  Ybb: '\\mathbb{Y}',
+  Zbb: '\\mathbb{Z}',
+
+  /* — calligraphic — */
+  Acal: '\\mathcal{A}',
+  Bcal: '\\mathcal{B}',
+  Ccal: '\\mathcal{C}',
+  Dcal: '\\mathcal{D}',
+  Ecal: '\\mathcal{E}',
+  Fcal: '\\mathcal{F}',
+  Gcal: '\\mathcal{G}',
+  Hcal: '\\mathcal{H}',
+  Ical: '\\mathcal{I}',
+  Jcal: '\\mathcal{J}',
+  Kcal: '\\mathcal{K}',
+  Lcal: '\\mathcal{L}',
+  Mcal: '\\mathcal{M}',
+  Ncal: '\\mathcal{N}',
+  Ocal: '\\mathcal{O}',
+  Pcal: '\\mathcal{P}',
+  Qcal: '\\mathcal{Q}',
+  Rcal: '\\mathcal{R}',
+  Scal: '\\mathcal{S}',
+  Tcal: '\\mathcal{T}',
+  Ucal: '\\mathcal{U}',
+  Vcal: '\\mathcal{V}',
+  Wcal: '\\mathcal{W}',
+  Xcal: '\\mathcal{X}',
+  Ycal: '\\mathcal{Y}',
+  Zcal: '\\mathcal{Z}',
+
+  /* — fraktur (uppercase) — */
+  Afr: '\\mathfrak{A}',
+  Bfr: '\\mathfrak{B}',
+  Cfr: '\\mathfrak{C}',
+  Dfr: '\\mathfrak{D}',
+  Efr: '\\mathfrak{E}',
+  Ffr: '\\mathfrak{F}',
+  Gfr: '\\mathfrak{G}',
+  Hfr: '\\mathfrak{H}',
+  Ifr: '\\mathfrak{I}',
+  Jfr: '\\mathfrak{J}',
+  Kfr: '\\mathfrak{K}',
+  Lfr: '\\mathfrak{L}',
+  Mfr: '\\mathfrak{M}',
+  Nfr: '\\mathfrak{N}',
+  Ofr: '\\mathfrak{O}',
+  Pfr: '\\mathfrak{P}',
+  Qfr: '\\mathfrak{Q}',
+  Rfr: '\\mathfrak{R}',
+  Sfr: '\\mathfrak{S}',
+  Tfr: '\\mathfrak{T}',
+  Ufr: '\\mathfrak{U}',
+  Vfr: '\\mathfrak{V}',
+  Wfr: '\\mathfrak{W}',
+  Xfr: '\\mathfrak{X}',
+  Yfr: '\\mathfrak{Y}',
+  Zfr: '\\mathfrak{Z}',
+
+  /* — fraktur (lowercase) — */
+  afr: '\\mathfrak{a}',
+  bfr: '\\mathfrak{b}',
+  cfr: '\\mathfrak{c}',
+  dfr: '\\mathfrak{d}',
+  efr: '\\mathfrak{e}',
+  ffr: '\\mathfrak{f}',
+  gfr: '\\mathfrak{g}',
+  hfr: '\\mathfrak{h}',
+  ifr: '\\mathfrak{i}',
+  jfr: '\\mathfrak{j}',
+  kfr: '\\mathfrak{k}',
+  lfr: '\\mathfrak{l}',
+  mfr: '\\mathfrak{m}',
+  nfr: '\\mathfrak{n}',
+  ofr: '\\mathfrak{o}',
+  pfr: '\\mathfrak{p}',
+  qfr: '\\mathfrak{q}',
+  rfr: '\\mathfrak{r}',
+  sfr: '\\mathfrak{s}',
+  tfr: '\\mathfrak{t}',
+  ufr: '\\mathfrak{u}',
+  vfr: '\\mathfrak{v}',
+  wfr: '\\mathfrak{w}',
+  xfr: '\\mathfrak{x}',
+  yfr: '\\mathfrak{y}',
+  zfr: '\\mathfrak{z}',
+
+  /* — operator — */
+  Spec: '\\operatorname{Spec}'
+}
+
   },
   options: {
     // Prevents MathJax from processing content within these HTML tags
@@ -192,9 +305,15 @@ majoring in mathematics.</p>
           <!-- Latest posts -->
           <h2><a href="/blog/" style="color: inherit;">latest posts</a></h2>
           <div class="news">
-            <div class="table-responsive">
+            <div class="table-responsive" style="max-height: 60vw">
               <table class="table table-sm table-borderless">
               
+                <tr>
+                  <th scope="row">Jul 23, 2025</th>
+                  <td>
+                    <a class="news-title" href="/blog/2025/AG-post-1/">On the Quasi-finite Morphisms</a>
+                  </td>
+                </tr>
                 <tr>
                   <th scope="row">Jul 11, 2025</th>
                   <td>
@@ -205,12 +324,6 @@ majoring in mathematics.</p>
                   <th scope="row">Jul 4, 2025</th>
                   <td>
                     <a class="news-title" href="/blog/2025/NT-post-1/">Algebraically closed complete field may not have a complete image in $\mathbb{R}$ under its absolute value</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Jul 19, 2023</th>
-                  <td>
-                    <a class="news-title" href="/blog/2023/LA-post-1/">Natural Isomorphisms with Non-Natural-Looking Inverses</a>
                   </td>
                 </tr>
               </table>

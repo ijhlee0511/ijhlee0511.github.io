@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>On the Quasi-finite Morphisms | Jaehyeon  Lee</title>
+    <meta name="author" content="Jaehyeon  Lee">
+    <meta name="description" content="In this post, we will discuss the definition and properties of quasi-finite morphisms, and its application to Zariski's Main Theorem.">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://ijhlee0511.github.io/blog/2025/AG-post-1/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+
+    
+      <script>
+window.MathJax = {
+  loader: {load: ['[tex]/ams', '[tex]/mathtools', '[tex]/amscd', '[tex]/braket', '[tex]/color']},
+  tex: {
+    // Delimiters for inline and display math
+    inlineMath:  [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    
+    // Packages are automatically loaded from this list
+    packages: {'[+]': [
+      'ams', 'mathtools', 'amscd', 'braket', 'color'
+    ]},
+    
+    // Your custom macros
+    macros: {
+  /* — blackboard-bold — */
+  Abb: '\\mathbb{A}',
+  Bbb: '\\mathbb{B}',
+  Cbb: '\\mathbb{C}',
+  Dbb: '\\mathbb{D}',
+  Ebb: '\\mathbb{E}',
+  Fbb: '\\mathbb{F}',
+  Gbb: '\\mathbb{G}',
+  Hbb: '\\mathbb{H}',
+  Ibb: '\\mathbb{I}',
+  Jbb: '\\mathbb{J}',
+  Kbb: '\\mathbb{K}',
+  Lbb: '\\mathbb{L}',
+  Mbb: '\\mathbb{M}',
+  Nbb: '\\mathbb{N}',
+  Obb: '\\mathbb{O}',
+  Pbb: '\\mathbb{P}',
+  Qbb: '\\mathbb{Q}',
+  Rbb: '\\mathbb{R}',
+  Sbb: '\\mathbb{S}',
+  Tbb: '\\mathbb{T}',
+  Ubb: '\\mathbb{U}',
+  Vbb: '\\mathbb{V}',
+  Wbb: '\\mathbb{W}',
+  Xbb: '\\mathbb{X}',
+  Ybb: '\\mathbb{Y}',
+  Zbb: '\\mathbb{Z}',
+
+  /* — calligraphic — */
+  Acal: '\\mathcal{A}',
+  Bcal: '\\mathcal{B}',
+  Ccal: '\\mathcal{C}',
+  Dcal: '\\mathcal{D}',
+  Ecal: '\\mathcal{E}',
+  Fcal: '\\mathcal{F}',
+  Gcal: '\\mathcal{G}',
+  Hcal: '\\mathcal{H}',
+  Ical: '\\mathcal{I}',
+  Jcal: '\\mathcal{J}',
+  Kcal: '\\mathcal{K}',
+  Lcal: '\\mathcal{L}',
+  Mcal: '\\mathcal{M}',
+  Ncal: '\\mathcal{N}',
+  Ocal: '\\mathcal{O}',
+  Pcal: '\\mathcal{P}',
+  Qcal: '\\mathcal{Q}',
+  Rcal: '\\mathcal{R}',
+  Scal: '\\mathcal{S}',
+  Tcal: '\\mathcal{T}',
+  Ucal: '\\mathcal{U}',
+  Vcal: '\\mathcal{V}',
+  Wcal: '\\mathcal{W}',
+  Xcal: '\\mathcal{X}',
+  Ycal: '\\mathcal{Y}',
+  Zcal: '\\mathcal{Z}',
+
+  /* — fraktur (uppercase) — */
+  Afr: '\\mathfrak{A}',
+  Bfr: '\\mathfrak{B}',
+  Cfr: '\\mathfrak{C}',
+  Dfr: '\\mathfrak{D}',
+  Efr: '\\mathfrak{E}',
+  Ffr: '\\mathfrak{F}',
+  Gfr: '\\mathfrak{G}',
+  Hfr: '\\mathfrak{H}',
+  Ifr: '\\mathfrak{I}',
+  Jfr: '\\mathfrak{J}',
+  Kfr: '\\mathfrak{K}',
+  Lfr: '\\mathfrak{L}',
+  Mfr: '\\mathfrak{M}',
+  Nfr: '\\mathfrak{N}',
+  Ofr: '\\mathfrak{O}',
+  Pfr: '\\mathfrak{P}',
+  Qfr: '\\mathfrak{Q}',
+  Rfr: '\\mathfrak{R}',
+  Sfr: '\\mathfrak{S}',
+  Tfr: '\\mathfrak{T}',
+  Ufr: '\\mathfrak{U}',
+  Vfr: '\\mathfrak{V}',
+  Wfr: '\\mathfrak{W}',
+  Xfr: '\\mathfrak{X}',
+  Yfr: '\\mathfrak{Y}',
+  Zfr: '\\mathfrak{Z}',
+
+  /* — fraktur (lowercase) — */
+  afr: '\\mathfrak{a}',
+  bfr: '\\mathfrak{b}',
+  cfr: '\\mathfrak{c}',
+  dfr: '\\mathfrak{d}',
+  efr: '\\mathfrak{e}',
+  ffr: '\\mathfrak{f}',
+  gfr: '\\mathfrak{g}',
+  hfr: '\\mathfrak{h}',
+  ifr: '\\mathfrak{i}',
+  jfr: '\\mathfrak{j}',
+  kfr: '\\mathfrak{k}',
+  lfr: '\\mathfrak{l}',
+  mfr: '\\mathfrak{m}',
+  nfr: '\\mathfrak{n}',
+  ofr: '\\mathfrak{o}',
+  pfr: '\\mathfrak{p}',
+  qfr: '\\mathfrak{q}',
+  rfr: '\\mathfrak{r}',
+  sfr: '\\mathfrak{s}',
+  tfr: '\\mathfrak{t}',
+  ufr: '\\mathfrak{u}',
+  vfr: '\\mathfrak{v}',
+  wfr: '\\mathfrak{w}',
+  xfr: '\\mathfrak{x}',
+  yfr: '\\mathfrak{y}',
+  zfr: '\\mathfrak{z}',
+
+  /* — operator — */
+  Spec: '\\operatorname{Spec}'
+}
+
+  },
+  options: {
+    // Prevents MathJax from processing content within these HTML tags
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+    
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Jaehyeon </span>Lee</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">solutions</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/AtiyahMcdonald">Atiyah &amp; MacDonald</a>
+                </div>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">On the Quasi-finite Morphisms</h1>
+    <p class="post-meta">July 23, 2025</p>
+    <p class="post-tags">
+      <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
+        ·  
+        <a href="/blog/category/algebraic-geometry">
+          <i class="fas fa-tag fa-sm"></i> Algebraic_Geometry</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>In this post, we will discuss the definition and properties of quasi-finite morphisms, and its application to Zariski’s Main Theorem.</p>
+
+<h3 id="finite-morphisms"><strong>1. Finite Morphisms</strong></h3>
+
+<p>Before diving into the theory of quasi-finite morphisms, we briefly recall the definition of finite morphisms in scheme theory.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 1.</strong> A morphism \(f: X \to Y\) is a <strong>finite</strong> morphism of schemes if there exists a covering of \(Y\) by open affine subsets \(V_i = \Spec B_i\), such that for each \(i\), \(f^{-1}(V_i)\) is affine, equal to \(\Spec A_i\), where \(A_i\) is a \(B_i\)-algebra which is a finitely generated \(B_i\)-module.</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 2.</strong> A morphism of schemes \(f:X \to Y\) is <strong>affine</strong> if the inverse image of any open affine subset \(V\) of \(Y\) is an open affine subset of \(X\).</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Lemma 1.</strong> A morphism \(f: X \to Y\) of schemes is finite if and only if \(f\) is affine and \(\Gamma(f^{-1}(V), \mathcal{O}_X)\) is a \(\Gamma(V,\mathcal{O}_Y)\)-algebra which is a finitely generated \(\Gamma(V,\mathcal{O}_Y)\)-module.</p>
+</blockquote>
+
+<p><em>Proof.</em> See Exercise 3.4(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>.$\quad\square$</p>
+
+<p>Finite morphisms have several nice properties.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Proposition 1.</strong><br>
+1. A closed immersion is finite.<br>
+2. The composite of two finite morphisms is finite.<br>
+3. Any base change of a finite morphism is finite.</p>
+</blockquote>
+
+<p><em>Proof.</em> These reduce to statements about rings, which follow directly from standard results.
+For example, for (3), reducing to the local case, we need to show the following: if a ring homomorphism \(\varphi: B \to A\) is finite, then so is the induced map \(\varphi’: B’ \to A \otimes_B B’\) for any \(B\)-algebra \(B’\). $\quad\square$</p>
+
+<p>Furthermore, by commutative algebra, it is easy to see that every finite morphism is integral; the precise definition follows.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 3.</strong> Let \(f:X \to Y\) be a morphism of schemes. We say that \(f\) is <strong>integral</strong> if \(f\) is affine and if for every affine open \(\Spec B = V \subseteq Y \) with inverse image \(\Spec A = f^{-1}(V)\subseteq X\) the associated ring map \(B \to A\) is integral.</p>
+</blockquote>
+
+<p>However, one of the most important properties of finite morphisms is that they are proper morphisms; that is, they behave similarly to continuous maps between compact Hausdorff spaces.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Proposition 2.</strong> Any finite morphism \(f : X \to Y\) is proper, that is, it is separated, of finite type, and universally closed.</p>
+</blockquote>
+<p><em>Proof.</em> It is known that every affine morphism is separated (<a href="https://stacks.math.columbia.edu/tag/01S7" rel="external nofollow noopener" target="_blank">Tag 01S7</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>), so every finite morphism is automatically separated.
+By the “going up” theorem, one can easily show that every integral morphism is universally closed (<a href="https://stacks.math.columbia.edu/tag/01WM" rel="external nofollow noopener" target="_blank">Tag 01WM</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).$\quad\square$</p>
+
+<h3 id="quasi-finite-morphisms"><strong>2. Quasi-Finite Morphisms</strong></h3>
+
+<p>In general, we denote by \(X \times_SY\) the fiber product of two \(S\)-schemes \(X\) and \(Y\). When \(S = \Spec R\) is affine, we also write \(X \times_R Y\). When \(Y = \Spec B\), instead of writing \(X \times_R Y\) we may write \(X \times_S B\); and if, in addition, \(S = \Spec R\) is affine, we write \(X \otimes_R B\).
+We recall the definition of the fiber.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 4.</strong> Let \(f: X \to Y\) be a morphism of schemes, and let \(y \in Y\) be a point.
+Let \(k(y)\) be the residue field of \(y\), and let \(\Spec k(y) \to Y\) be the natural morphism.
+Then we define the <strong>fiber</strong> of the morphism \(f\) over the point \(y\) to be the scheme
+\[ X_y = X \times_Y \Spec k(y). \]</p>
+</blockquote>
+
+<p>The fiber \(X_y\) is a scheme over \(k(y)\), and one can show that its underlying topological space is homeomorphic to the subset \(f^{-1}(y)\) of \(X\) (Exer.3.10(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>).</p>
+
+<p>In EGA II <a class="citation" href="#EGAII">(Grothendieck 1961)</a>, Grothendieck defines quasi-finite morphisms.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 5.</strong> Let \(f: X \to Y\) be a morphism of schemes.
+We say that \(f\) is <strong>quasi-finite</strong> if \(f\) is of finite type and \(X_y\) is discrete for all \(y \in Y\).</p>
+</blockquote>
+
+<p>In fact, \(X_y\) is discrete if and only if it is finite.
+Since morphisms of finite type are stable under base change, the fiber \(X_y\) is a \(k(y)\)-scheme of finite type, and hence \(X_y\) is Noetherian (see Exer.3.13(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>).
+It is easy to see that every discrete Noetherian topological space must be finite.
+This fact explains why some books like <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a> define quasi-finite morphisms by finite fibers instead of discrete fibers.</p>
+
+<p>The notion of quasi-finite morphism is not purely topological due to the finite type condition. If \(K\) is a field extension of a field \(k\), the morphism \(\Spec K \to \Spec k\) is quasi-finite only when \(K\) is a finite extension of \(k\), even though both schemes involved are reduced and each consists of a single point.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Lemma 2.</strong> A finite morphism is quasi-finite.</p>
+</blockquote>
+
+<p><em>Proof.</em> We reduce to the following algebraic fact: if \(\varphi : B \to A\) be a finite ring homomorphism (i.e., \(A\) is a finitely generated \(B\)-module),
+then for a given prime ideal \(\qfr\) of \(B\), there are finitely many prime ideals \(\pfr\) of \(A\) such that \(\varphi^{-1}(\pfr) = \qfr\).
+Note that the induced homomorphism \(\varphi_\qfr : B_\qfr \to A_\qfr\) is also finite.
+Every prime ideal \(\pfr\) of \(A\) satisfying \(\varphi^{-1}(\pfr) = \qfr\) survives in \(A_\qfr\).
+Let \(\nfr\coloneqq \qfr B_\qfr\) be the unique maximal ideal of \(B_\qfr\).
+Since all the prime ideals of \(A_\qfr\), whose preimage is \(\nfr\), contains \(\nfr A_\qfr\), we can replace \(B_\qfr \to A_\qfr\) with \(B_\qfr / \nfr \to A_\qfr / \nfr A_\qfr\), which is still a finite ring homomorphism.
+Thus, \(A_\qfr / \nfr A_\qfr\) is a finite algebra over a field, so it is Artinian and has finitely many primes (Exercises 8.2 and 8.3 of <a class="citation" href="#atiyahIntroductionCommutativeAlgebra2018a">(Atiyah and MacDonald 2018)</a>).$\quad\square$</p>
+
+<p>The proof of Lemma 2 can be rewritten in the following proposition.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Lemma 3.</strong> Let $f: X \to Y$ be a morphism of finite type. Then $f$ is quasi-finite if and only if for every $x \in X$, the scheme $X_{f(x)}$ is a finite $k(f(x))$-scheme.</p>
+</blockquote>
+
+<p>The converse of Lemma 2 is false in general.
+For instance, consider the embedding \(\Abb_k^1 \setminus \{0\} \hookrightarrow \Abb_k^1\) of punctured affine line into the affine line.
+While it is clearly quasi-finite, it is not closed, so it is not finite by Proposition 2.
+Also, there are several non-trivial examples.</p>
+
+<p><strong>Example 1.</strong> A surjective and quasi-finite morphism need not be finite.
+Let \(X_1 = X_2 = \Abb_k^1\), let \(U_1 = U_2 = \Abb_k^1 \setminus \{P\}\), where \(P\) is the point corresponding to the maximal ideal \(x\), and let \(\varphi : U_1 \to U_2\) be the identity map.
+Let \(X\) be obtained by glueing \(X_1\) and \(X_2\) along \(U_1\) and \(U_2\) via \(\varphi\); i.e., \(X\) is the affine line with the point \(P\) doubled.
+Let \(Y = \Spec k[x] = \Abb_k^1\), and let \(f : X \to Y\) be the morphism obtained by the identity maps \(X_1 \to Y\) and \(X_2 \to Y\).
+Then this morphism is clearly surjective and has finite fibers.
+It is also of finite type, since \(f^{-1}(Y)\) has two affine coverings \(\Spec k[x]\), and clearly \(k[x]\) is itself a finite\(k[x]\)-algebra.
+However, \(X=f^{-1}(Y)\) is not affine, so \(f\) is not finite.</p>
+
+<p><strong>Example 2.</strong> Let \(A\) be a Dedekind domain with field of fractions \(K\). Then \(\Spec K \to \Spec A\) is never finite, it is quasi-finite if it is of finite type, and it is of finite type if and only if \(A\) has only finitely many prime ideals.<br>
+Suppose for contradiction that \(a_1/b_1, \ldots, a_n/b_n \in K\) generate \(K\) as an \(A\)-module, where \(a_i, b_i \in A\).
+Since \(A\) is not a field, there exists a non-zero prime \(\pfr\), and \(A_\pfr \subseteq K\) is a discrete valuation ring with a discrete valuation \(v\).
+Because \(K\) is also a field of fractions of \(A_\pfr\), and \(v\) gives the valuation on \(K\).
+Thus, for any \(x \in K\), we have \(v(x) \ge - \max_i\{v(b_i)\}\).
+However, clearly the valuation of \(K\) is not bounded below (e.g., for sufficiently large \(N\), the valuation of \(\pi^{-N}\) is \(-N\) where \(\pi\) is a uniformiser of \(\pfr\) in \(A_\pfr\)), a contradiction.
+This shows that \(\Spec K \to \Spec A\) is never finite.
+Meanwhile, it is quasi-finite by the definition if it is of finite type.
+Now we show that it is of finite type if and only if \(A\) has only finitely many prime ideals.
+Suppose that \(A\) has only finitely many prime ideals.
+Let the non-zero prime ideals of \(A\) be \(\pfr_1, \ldots, \pfr_r\), and fix a uniformiser \(\pi_i \in \pfr_i \setminus \pfr_i^2\) for each \(i\).
+Then it is easy to see that every element \(x\) in \(K\) can be expressed as
+\[x = u\pi_1^{n_1} \cdots \pi_r^{n_r} \]
+where \(u \in A^\times\) and \(n_i \in \mathbb{Z}\).
+This shows that \(K = A[\pi_1^{-1}, \ldots, \pi_r^{-1}]\).
+For the forward direction, assume \(K = A[x_1, \ldots, x_n]\) for some \(x_1, \ldots, x_n \in K\).
+Write each generators in reduced from: \(x_i = a_i/b_i\) where \(a_i,b_i \in A\) and \(b_i \neq 0\).
+Let \(S\) be the set of prime ideals of \(A\) dividing some \((b_i)\).
+Since \(A\) is Dedekind, for each \(b_i\), only finitely many prime ideals can contain \(b_i\), so \(S\) is finite.
+We claim that there is no nonzero prime of \(A\) not in \(S\).
+Suppose there exists a prime \(\pfr\) not in \(S\), and let \(\pi_\pfr\) be a uniformiser of \(\pfr\).
+Since \(K = A[x_1, \ldots, x_n]\), there exists some polynomial \(P(T_1, \ldots, F_n) \in A[T_1, \ldots, T_n]\) such that \(\pi_\pfr = P(x_1, \ldots, x_n)\).
+Thus, we have an expression
+\[ \pi_{\pfr}^{-1} = \frac{c}{b_1^{e_1} \cdots b_n^{e_n}} \quad (c \in A, \ e_i \ge 0) \]
+in \(K\), so we get \(c\pi_{\pfr} = b_1^{e_1} \cdots b_n^{e_n}\), a contradiction.</p>
+
+<p>However, if we force a quasi-finite morphism to be proper, then it must be finite.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Proposition 3.</strong> Let $f: X \to Y$ be a morphism of schemes. Then $f$ is finite if and only if $f$ is proper and quasi-finite.</p>
+</blockquote>
+<p><em>Proof.</em> See (8.11.1)<a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> under the assumption that the morphism is locally of finite presentation, or <a href="https://stacks.math.columbia.edu/tag/02LS" rel="external nofollow noopener" target="_blank">Tag 02LS</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a> for any morphism (in fact, we can prove it using Zariski’s Main Theorem). $\quad\square$</p>
+
+<p>Proposition 3 is extremely useful in practice. 
+In general, showing directly that a morphism is finite is not easy.
+However, for properness, we have the valuative criterion, and quasi-finiteness is not difficult to check.</p>
+
+<p>Quasi-finite morphisms also have several good properties.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Proposition 4.</strong> 
+1. Any immersion is quasi-finite.<br>
+2. The composite of two quasi-finite morphisms is quasi-finite.<br>
+3. Any base change of a quasi-finite morphism is quasi-finite.</p>
+</blockquote>
+
+<p><em>Proof.</em> We only show (3). Let \(f: X \to S\) be quasi-finite and \(S’ \to S\) arbitrary, and assume \(s’ \mapsto s\).
+Then \( \Spec k(s’) \to S’ \to S \) factors through the point \(s\), so we get
+\[ 
+\begin{aligned}
+    \left(X \times_S S’\right)_{s’} 
+    &amp;= \left(X \times_{S} S’\right) \times_{S’} k(s’) \\
+    &amp;\cong X \times_S \left( S’ \times_{S’} k(s’) \right) \\
+    &amp;\cong X \times_S k(s’) \\
+    &amp;\cong X \times_S \left(\Spec k(s) \otimes_{k(s)} k(s’) \right) \\
+    &amp;\cong \left(X \times_S \Spec k(s) \right) \otimes_{k(s)} k(s’) \\
+    &amp;= X_s \otimes_{k(s)} k(s’).
+\end{aligned}
+\]
+Since \(X_s\) is finite over \(k(s)\) by Lemma 3, and finite morphism is stable under base change, we conclude that \(X_s \otimes_{k(s)} k(s’)\) is finite over \(k(s’)\).
+By Lemma 3, this shows that \( \left(X \times_S S’\right)_{s’} \) is discrete. $\quad\square$</p>
+
+<p>In most cases, the previous definition of quasi-finite morphisms is sufficient.
+Nevertheless, Grothendieck added definitions of quasi-finiteness in local sense in the 2nd edition of EGA I <a class="citation" href="#EGAI2">(Grothendieck and Dieudonné 1971)</a></p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 6.</strong> Let \(f: X \to Y\) be a morphism of schemes.<br>
+1. We say that \(f\) is <strong>quasi-finite at a point \(x \in X\)</strong> if there are affine open neighborhoods \(V\) of \(y = f(x)\) and \(U\) of \(x\) such that \(f(U)\subseteq V\) and the restricted morphism \(U \to V\) is quasi-finite.<br>
+2. We say that \(f\) is <strong>locally quasi-finite</strong> if \(f\) is quasi-finite at every point \(x\) of \(X\).</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Lemma 4.</strong> Let \(f: X \to Y\) be a morphism of schemes.
+The set \(U\) of points of \(X\) where \(f\) is quasi-finite is open in \(X\).
+The induced morphism \(U\) is locally quasi-finite.</p>
+</blockquote>
+<p><em>Proof.</em> See <a href="https://stacks.math.columbia.edu/tag/01TI" rel="external nofollow noopener" target="_blank">Tag 01TI</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+
+<p>I think he might realize that ‘quasi-finite at a point’ is a useful notion in practice when applying theorems about quasi-finite morphisms.
+A good example would be an application of Zariski’s Main Theorem.</p>
+
+<h3 id="zariskis-main-theorem"><strong>3. Zariski’s Main Theorem</strong></h3>
+
+<p>The classical statement of Zariski’s Main Theorem in <a class="citation" href="#zariskiFoundationsGeneralTheory1943">(Zariski 1943)</a> is as follows.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Theorem 1 (Zariski’s Main Theorem–Original Version).</strong>  If \(W\) is an irreducible fundamental variety on \(V\) of a birational correspondence $T$ between $V$ and $V’$, and if $T$ has no fundamental elements on $V’$, then–under the assumption that $V$ is locally normal at $W$–each irreducible component of the transform $T[W]$ is of higher dimension than $W$.</p>
+</blockquote>
+
+<p>This theorem contains several terminologies not used in now days.
+Very roughly, the theorem says that if the target has no ‘bad points(fundamental elements)’, then a birational maps can not contract any ‘bad parts(fundamental variety)’ in the source: every such ‘bad part’ is sent to a subvariety of strictly higher dimension.</p>
+
+<p>Historically, there have been numerous variants of Zariski’s Main Theorem, and it can be difficult to verify how they are related to one another.
+One such version appears in <a class="citation" href="#Mumford1999-RedBook">(Mumford 1999)</a>, where the author provides an intuitive explanation of Zariski’s Main Theorem for varieties over $\mathbb{C}$ and explains how several versions of Zariski’s Matin Theorem are realted.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Theorem 2 (Zariski’s Main Theorem–The Red Book Version).</strong>  Let $X$ be a normal variety over an algebraically closed field $k$ and let $f : X’ \to X$ be a birational morphism with finite fibres from a variety $X’$ to $X$.
+Then $f$ is an isomorphism of $X’$ with an open subset $U \subseteq X$.</p>
+</blockquote>
+
+<p>In EGA III, Grothendieck states The Red Book Version in the language of scheme theory.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Theorem 3 (Zariski’s Main Theorem–Grothendieck’s 1st Version).</strong>
+Let $Y$ be a Noetherian scheme and let $f : X \to Y$ be a quasi-projective morphism.
+Denote by $X’$ the set of points $x \in X$ that are isolated in their fiber, i.e., such that $x$ is an isolated point of the fiber $f^{-1}(f(x))$. Then $X’$ is an open subset of $X$, and the induced subscheme $X’$ is isomorphic to the subscheme induced on an open subset of a $Y$-scheme $Y’$ that is finite over $Y$.</p>
+</blockquote>
+<p><em>Proof.</em> (4.4.3)<a class="citation" href="#EGAIII_1">(Grothendieck 1961)</a>$\quad\square$</p>
+
+<p>Grothendieck eventually realized that the first version suggests a deeper structural property of quasi-finite morphisms, and subsequently stated a more general version in EGA IV.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Theorem 4 (Zariski’s Main Theorem–Grothendieck’s 2nd Version).</strong>
+Let $Y$ be a quasi-compact and quasi-separated scheme.
+If $f : X \to Y$ is quasi-finite, separated, and of finite presentation, then $f$ factors as $X \xrightarrow{f’} Y’ \xrightarrow{u} Y $, where $f’$ is an open immersion and $u$ is a finite morphism.</p>
+</blockquote>
+<p><em>Proof.</em> The proof demands a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ" rel="external nofollow noopener" target="_blank">Tag 02LQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+
+<p>The theorem says that quasi-finite morphisms are essentially “almost finite” morphisms. Since quasi-finite morphisms arise naturally in several circumstances, Zariski’s Main Theorem enables us to apply powerful theories (e.g., étale cohomology theory).
+We close this post with two toy applications of Zariski’s Main Theorem.
+The first example is a proof of Proposition 3.</p>
+
+<p><strong>Proof of Proposition 3.</strong> Note that finiteness is a local property, so we may assume \(X\) is affine, which is quasi-compact.
+Let \(f = u \circ f’\) be the factorization as in Zariski’s Main Theorem.
+Since the composite of two finite morphisms is finite, it suffices to show that \(f’\) is finite.
+Consider the graph morphism \(\Gamma_{f’}: X \to X \times_X Y’\) defined by \(x \mapsto (x,f’(x))\).
+It is known that any graph of a separated morphism is a closed immersion (<a href="https://stacks.math.columbia.edu/tag/024T" rel="external nofollow noopener" target="_blank">Tag 024T</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a> or (5.2.4)<a class="citation" href="#EGAI2">(Grothendieck and Dieudonné 1971)</a>, so \(\Gamma_{f’}\) is a closed immersion (hence finite and proper).
+Thus, \(f’\) is proper, since \(f’ = p_{Y’} \circ \Gamma_f\) with the projection \( p_{Y’} : X \times_X Y’ \to Y’ \).
+This shows that \(f’\) is an immersion with a closed image, that is, a closed immersion (<a href="https://stacks.math.columbia.edu/tag/01IQ" rel="external nofollow noopener" target="_blank">Tag 01IQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+This ends the proof.$\quad\square$</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 7.</strong> A scheme $X$ is called <strong>quasi-affine</strong> if it is quasi-compact and isomorphic to an open subscheme of an affine scheme.</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 8.</strong> A morphism of schemes $f:X \to Y$ is called <strong>quasi-affine</strong> if the inverse image of every affine open of $Y$ is a quasi-affine scheme.</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Corollary 1.</strong> A separated quasi-finite morphism is quasi-affine.</p>
+</blockquote>
+
+<p><em>Proof.</em> Let $f : X \to Y$ be a separated quasi-finite morphism.
+Then $f$ factors as $X \xrightarrow{f’} Y’ \xrightarrow{u} Y $ where $f’$ is an open immersion and $u$ is a finite morphism.
+Let $V$ be an affine open of $Y$. Then $u^{-1}(V)$ is an affine open of $Y’$, and $f^{-1}(V)$ is isomorphic to $f(V) \cap u^{-1}(V)$, which is an open subscheme of $u^{-1}(V)$. $\quad\square$</p>
+
+<p><br></p>
+
+<h2 class="references" id="references">References</h2>
+<ol class="bibliography">
+<li>
+<span id="atiyahIntroductionCommutativeAlgebra2018a">Atiyah, Michael F., and I. G. MacDonald. 2018. <i>Introduction To Commutative Algebra</i>. Boca Raton: CRC Press. <a href="https://doi.org/10.1201/9780429493638" target="_blank" rel="noopener">https://doi.org/10.1201/9780429493638</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="EGAII">Grothendieck, Alexander. 1961. “Éléments De Géométrie Algébrique : II. Étude Globale Élémentaire De Quelques Classes De Morphismes.” <i>Publications Mathématiques De l’IHÉS</i> 8. Institut des Hautes Études Scientifiques: 5–222. <a href="https://www.numdam.org/item/PMIHES_1961__8__5_0/" target="_blank" rel="noopener">https://www.numdam.org/item/PMIHES_1961__8__5_0/</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="EGAIII_1">———. 1961. “Éléments De Géométrie Algébrique : III. Étude Cohomologique Des Faisceaux Cohérents, Première Partie.” <i>Publications Mathématiques De l’IHÉS</i> 11. Institut des Hautes Études Scientifiques: 5–167. <a href="https://www.numdam.org/item/PMIHES_1961__11__5_0/" target="_blank" rel="noopener">https://www.numdam.org/item/PMIHES_1961__11__5_0/</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="EGAIV_3">———. 1966. “Éléments De Géométrie Algébrique : IV. Étude Locale Des Schémas Et Des Morphismes De Schémas, Troisième Partie.” <i>Publications Mathématiques De l’IHÉS</i> 28. Institut des Hautes Études Scientifiques: 5–255. <a href="https://www.numdam.org/item/PMIHES_1966__28__5_0/" target="_blank" rel="noopener">https://www.numdam.org/item/PMIHES_1966__28__5_0/</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="EGAI2">Grothendieck, Alexandre, and Jean A. Dieudonné. 1971. <i>Éléments De Géométrie Algébrique. I: Le Langage Des Schémas</i>. 2nd ed. Vol. 166. Grundlehren Der Mathematischen Wissenschaften. Berlin and New York: Springer-Verlag.</span><span class="badges"></span>
+</li>
+<li>
+<span id="Hartshorne1977">Hartshorne, Robin. 1977. <i>Algebraic Geometry</i>. 1st ed. Vol. 52. Graduate Texts in Mathematics. New York, NY: Springer New York. <a href="https://doi.org/10.1007/978-1-4757-3849-0" target="_blank" rel="noopener">https://doi.org/10.1007/978-1-4757-3849-0</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="Mumford1999-RedBook">Mumford, David. 1999. <i>The Red Book of Varieties and Schemes: Includes the Michigan Lectures (1974) on Curves and Their Jacobians</i>. 2nd ed. Vol. 1358. Lecture Notes in Mathematics. Berlin / Heidelberg: Springer–Verlag. <a href="https://doi.org/10.1007/b62130" target="_blank" rel="noopener">https://doi.org/10.1007/b62130</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="zariskiFoundationsGeneralTheory1943">Zariski, Oscar. 1943. “Foundations of a General Theory of Birational Correspondences.” <i>Transactions of the American Mathematical Society</i> 53 (3): 490–542. <a href="https://doi.org/10.1090/S0002-9947-1943-0008468-9" target="_blank" rel="noopener">https://doi.org/10.1090/S0002-9947-1943-0008468-9</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="stacks-project">The Stacks project authors. 2025. “The Stacks Project.” <a href="https://stacks.math.columbia.edu" target="_blank" rel="noopener">https://stacks.math.columbia.edu</a>.</span><span class="badges"></span>
+</li>
+</ol>
+
+<script src="https://giscus.app/client.js" data-repo="ijhlee0511/ijhlee0511.github.io" data-repo-id="R_kgDOJqjmWQ" data-category="General" data-category-id="DIC_kwDOJqjmWc4CX-qZ" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
+</script>
+
+
+    </div>
+  </article>
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2025 Jaehyeon  Lee. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRB8KDG4TV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NRB8KDG4TV');
+  </script>
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+
+  </body>
+</html>
