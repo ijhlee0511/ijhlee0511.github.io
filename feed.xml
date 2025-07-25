@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ijhlee0511.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ijhlee0511.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-25T19:03:18+00:00</updated><id>https://ijhlee0511.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ijhlee0511.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ijhlee0511.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-07-25T19:07:31+00:00</updated><id>https://ijhlee0511.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">On Quasi-finite Morphisms (Part 2)</title><link href="https://ijhlee0511.github.io/blog/2025/AG-post-2/" rel="alternate" type="text/html" title="On Quasi-finite Morphisms (Part 2)" /><published>2025-07-25T00:00:00+00:00</published><updated>2025-07-25T00:00:00+00:00</updated><id>https://ijhlee0511.github.io/blog/2025/AG-post-2</id><content type="html" xml:base="https://ijhlee0511.github.io/blog/2025/AG-post-2/"><![CDATA[<p>In this post, we continue our discussion of the application of Zariski’s Main Theorem, following ‘<a href="/blog/2025/AG-post-1/" target="_blank">On Quasi-finite Morphisms (Part 1)</a>’.</p>
 
 <p>Let’s recall Grothendieck’s 2nd version of Zariski’s Main Theorem.</p>
@@ -74,7 +74,7 @@ Let $f: X \to Y$ be a morphism of schemes.
 If the direct-image sheaf $f_\ast\mathcal{O}_X$ is a quasi-coherent $\mathcal{O}_Y$-module (this is the case when $f$ is quasi-compact and quasi-separated), then the scheme-theoretic image of $Y’ \subseteq Y$ of $X$ under $f$ exists.
 The scheme-theoretic image $Y’$ contains $\overline{f(X)}$ as an underlying topological space, and in the factorization
 \[ X \xrightarrow{g} Y’ \xrightarrow{j} Z, \]
-where $j$ is the canonical immersion, $g$ is schematically dominant.</p>
+where $j$ is the canonical immersion, $g$ is scheme-theoretically dominant.</p>
 </blockquote>
 
 <p><em>Proof.</em> Note that $f$ is quasi-compact and quasi-separated, then  $f_\ast\mathcal{O}_X$ is a quasi-coherent $\mathcal{O}_Y$-module by <a href="https://stacks.math.columbia.edu/tag/01LC">Tag 01LC</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.
@@ -83,7 +83,7 @@ By the assumption, the sheaf of ideal
 is quasi-coherent (Prop.5.7(II)<a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>). 
 Let $Y’$ be the closed subscheme of $Y$ determined by $\Jcal$.
 It is easy to check that $Y’$ is the smallest by the construction.
-Because the morphism $\Ocal_Y / \Jcal \to f_\ast \Ocal_X$ is injective, the induced ring morphism $g : X \to Y’$ is schematically dominant.$\quad\square$</p>
+Because the morphism $\Ocal_Y / \Jcal \to f_\ast \Ocal_X$ is injective, the induced ring morphism $g : X \to Y’$ is scheme-theoretically dominant.$\quad\square$</p>
 
 <blockquote class="blockquote border-start ps-3">
   <p><strong>Corollary.</strong> Let $X$ be a subscheme of a scheme $Y$, and let $j: X \to Y$ be the canonical injection.
