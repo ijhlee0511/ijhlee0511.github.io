@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>On Quasi-finite Morphisms (Part 2) | Jaehyeon  Lee</title>
+    <meta name="author" content="Jaehyeon  Lee">
+    <meta name="description" content="In this post, we continue our discussion of the application of Zariski's Main Theorem, following 'On Quasi-finite Morphisms (Part 2)'.">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://ijhlee0511.github.io/blog/2025/AG-post-2/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+
+    
+      <script>
+window.MathJax = {
+  loader: {load: ['[tex]/ams', '[tex]/mathtools', '[tex]/amscd', '[tex]/braket', '[tex]/color']},
+  tex: {
+    // Delimiters for inline and display math
+    inlineMath:  [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    
+    // Packages are automatically loaded from this list
+    packages: {'[+]': [
+      'ams', 'mathtools', 'amscd', 'braket', 'color'
+    ]},
+    
+    // Your custom macros
+    macros: {
+  /* — blackboard-bold — */
+  Abb: '\\mathbb{A}',
+  Bbb: '\\mathbb{B}',
+  Cbb: '\\mathbb{C}',
+  Dbb: '\\mathbb{D}',
+  Ebb: '\\mathbb{E}',
+  Fbb: '\\mathbb{F}',
+  Gbb: '\\mathbb{G}',
+  Hbb: '\\mathbb{H}',
+  Ibb: '\\mathbb{I}',
+  Jbb: '\\mathbb{J}',
+  Kbb: '\\mathbb{K}',
+  Lbb: '\\mathbb{L}',
+  Mbb: '\\mathbb{M}',
+  Nbb: '\\mathbb{N}',
+  Obb: '\\mathbb{O}',
+  Pbb: '\\mathbb{P}',
+  Qbb: '\\mathbb{Q}',
+  Rbb: '\\mathbb{R}',
+  Sbb: '\\mathbb{S}',
+  Tbb: '\\mathbb{T}',
+  Ubb: '\\mathbb{U}',
+  Vbb: '\\mathbb{V}',
+  Wbb: '\\mathbb{W}',
+  Xbb: '\\mathbb{X}',
+  Ybb: '\\mathbb{Y}',
+  Zbb: '\\mathbb{Z}',
+
+  /* — calligraphic — */
+  Acal: '\\mathcal{A}',
+  Bcal: '\\mathcal{B}',
+  Ccal: '\\mathcal{C}',
+  Dcal: '\\mathcal{D}',
+  Ecal: '\\mathcal{E}',
+  Fcal: '\\mathcal{F}',
+  Gcal: '\\mathcal{G}',
+  Hcal: '\\mathcal{H}',
+  Ical: '\\mathcal{I}',
+  Jcal: '\\mathcal{J}',
+  Kcal: '\\mathcal{K}',
+  Lcal: '\\mathcal{L}',
+  Mcal: '\\mathcal{M}',
+  Ncal: '\\mathcal{N}',
+  Ocal: '\\mathcal{O}',
+  Pcal: '\\mathcal{P}',
+  Qcal: '\\mathcal{Q}',
+  Rcal: '\\mathcal{R}',
+  Scal: '\\mathcal{S}',
+  Tcal: '\\mathcal{T}',
+  Ucal: '\\mathcal{U}',
+  Vcal: '\\mathcal{V}',
+  Wcal: '\\mathcal{W}',
+  Xcal: '\\mathcal{X}',
+  Ycal: '\\mathcal{Y}',
+  Zcal: '\\mathcal{Z}',
+
+  /* — fraktur (uppercase) — */
+  Afr: '\\mathfrak{A}',
+  Bfr: '\\mathfrak{B}',
+  Cfr: '\\mathfrak{C}',
+  Dfr: '\\mathfrak{D}',
+  Efr: '\\mathfrak{E}',
+  Ffr: '\\mathfrak{F}',
+  Gfr: '\\mathfrak{G}',
+  Hfr: '\\mathfrak{H}',
+  Ifr: '\\mathfrak{I}',
+  Jfr: '\\mathfrak{J}',
+  Kfr: '\\mathfrak{K}',
+  Lfr: '\\mathfrak{L}',
+  Mfr: '\\mathfrak{M}',
+  Nfr: '\\mathfrak{N}',
+  Ofr: '\\mathfrak{O}',
+  Pfr: '\\mathfrak{P}',
+  Qfr: '\\mathfrak{Q}',
+  Rfr: '\\mathfrak{R}',
+  Sfr: '\\mathfrak{S}',
+  Tfr: '\\mathfrak{T}',
+  Ufr: '\\mathfrak{U}',
+  Vfr: '\\mathfrak{V}',
+  Wfr: '\\mathfrak{W}',
+  Xfr: '\\mathfrak{X}',
+  Yfr: '\\mathfrak{Y}',
+  Zfr: '\\mathfrak{Z}',
+
+  /* — fraktur (lowercase) — */
+  afr: '\\mathfrak{a}',
+  bfr: '\\mathfrak{b}',
+  cfr: '\\mathfrak{c}',
+  dfr: '\\mathfrak{d}',
+  efr: '\\mathfrak{e}',
+  ffr: '\\mathfrak{f}',
+  gfr: '\\mathfrak{g}',
+  hfr: '\\mathfrak{h}',
+  ifr: '\\mathfrak{i}',
+  jfr: '\\mathfrak{j}',
+  kfr: '\\mathfrak{k}',
+  lfr: '\\mathfrak{l}',
+  mfr: '\\mathfrak{m}',
+  nfr: '\\mathfrak{n}',
+  ofr: '\\mathfrak{o}',
+  pfr: '\\mathfrak{p}',
+  qfr: '\\mathfrak{q}',
+  rfr: '\\mathfrak{r}',
+  sfr: '\\mathfrak{s}',
+  tfr: '\\mathfrak{t}',
+  ufr: '\\mathfrak{u}',
+  vfr: '\\mathfrak{v}',
+  wfr: '\\mathfrak{w}',
+  xfr: '\\mathfrak{x}',
+  yfr: '\\mathfrak{y}',
+  zfr: '\\mathfrak{z}',
+
+  /* — operator — */
+  Spec: '\\operatorname{Spec}'
+}
+
+  },
+  options: {
+    // Prevents MathJax from processing content within these HTML tags
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+    
+
+  
+  <!-- tikzjax -->
+  <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+  <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Jaehyeon </span>Lee</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">solutions</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/AtiyahMcdonald">Atiyah &amp; MacDonald</a>
+                </div>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">On Quasi-finite Morphisms (Part 2)</h1>
+    <p class="post-meta">July 25, 2025</p>
+    <p class="post-tags">
+      <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
+        ·  
+        <a href="/blog/category/algebraic-geometry">
+          <i class="fas fa-tag fa-sm"></i> Algebraic_Geometry</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>In this post, we continue our discussion of the application of Zariski’s Main Theorem, following ‘<a href="/blog/2025/AG-post-1/" target="_blank">On Quasi-finite Morphisms (Part 1)</a>’.</p>
+
+<p>Let’s recall Grothendieck’s 2nd version of Zariski’s Main Theorem.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Theorem 1 (Zariski’s Main Theorem–Grothendieck’s 2nd Version).</strong>
+Let $Y$ be a quasi-compact and quasi-separated scheme.
+If $f : X \to Y$ is quasi-finite, separated, and of finite presentation, then $f$ factors as $X \xrightarrow{f’} Y’ \xrightarrow{u} Y $, where $f’$ is an open immersion and $u$ is a finite morphism.</p>
+</blockquote>
+<p><em>Proof.</em> The proof requires a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ" rel="external nofollow noopener" target="_blank">Tag 02LQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+
+<p>The goal of this post is to show the following: if a separated morphism of finite type has a finite generic fiber, then it is ‘generically finite’.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 1.</strong>
+A <strong>generic point</strong> of the topological space $X$ is a point $x \in X$ such that $X = \overline{\{x\}}$.</p>
+</blockquote>
+
+<p>Recall that a topological space $X$ is <strong>reducible</strong> if it can be written as a union $X = X_1 \cup X_2$ of two closed proper subsets $X_1$ and $X_2$ of $X$. A topological space is <strong>irreducible</strong> if it is not reducible.
+An <strong>irreducible component</strong> of a topological space is a maximal irreducible subset. If a subset is irreducible, its closure is also irreducible, so irreducible components are closed.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Proposition 1.</strong>
+Let $X$ be a scheme. Any irreducible closed subset of $X$ has a unique generic point.</p>
+</blockquote>
+<p><em>Proof.</em> See Exercise 2.9(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a> or <a href="https://stacks.math.columbia.edu/tag/01IS" rel="external nofollow noopener" target="_blank">Tag 01IS</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>. $\quad\square$</p>
+
+<p>To deal with questions about generic points, let’s recall the concepts of specialization and generalization</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 2.</strong>
+Let $X$ be a topological space. If $x,x’ \in X$, then we say that $x$ is a <strong>specialization</strong> of $x’$ (or equivalently, $x’$ is a <strong>generalization</strong> of $x$) if $x \in \overline{\{x’\}}$, and we denote this by $x’\leadsto x$.</p>
+</blockquote>
+
+<p>Recall that for any continuous map $f : X \to Y$ between topological spaces, for $A \subseteq X$ we have $f\left(\overline{A}\right) \subseteq \overline{f(A)}$.
+Thus, continuous maps preserve the relations of specialization and generalization.</p>
+
+<p>Recall that a morphism of scheme $f: X \to Y$ is <strong>dominant</strong> if $\overline{f(X)} = Y$.
+We also define scheme-theoretically dominant morphisms.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 3.</strong>
+Let $f : Z \to X$ be a morphism of schemes.
+When the homomorphism $\Ocal_X \to f_\ast\Ocal_Z$ is injective, we say that $f$ is <strong>scheme-theoretically dominant</strong>.
+When $f$ is the canonical injection of a subscheme $Z \subseteq X$, we also say that $Z$ is <strong>scheme-theoretically dense</strong> in $X$.</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Lemma 1.</strong>
+A scheme-theoretically dominant morphism is dominant.</p>
+</blockquote>
+
+<p><em>Proof.</em> For any nonempty open subset $U \subseteq X$, the homomorphism $\Gamma(U,\Ocal_X) \to \Gamma(f^{-1}(U), \Ocal_Z)$ is injective.
+Hence, $f^{-1}(U) \neq \varnothing$, implying that $U \cap f(Z) \neq \varnothing$.
+This shows that $\overline{f(Z)}=X$. $\quad\square$</p>
+
+<p>Now we study the definition and properties of scheme-theoretic images and closures.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 4.</strong>
+Let $f : X \to Y$ be a morphism of schemes. If there exists the smallest closed subscheme $Y’ \subseteq Y$ such that $f$ factors through the canonical injection $j : Y’ \to Y$, then $Y’$ is called the <strong>scheme-theoretic image</strong> of $X$ in $Y$ under $f$.</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Definition 5.</strong>
+Let $U$ be a subscheme of of a scheme $X$. 
+If there exists a smallest closed subscheme $V \subseteq X$ that contains $V$, then $V$ is called the <strong>scheme-theoretic closure</strong> of $U$ in $X$.</p>
+</blockquote>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Proposition 2</strong> ((6.10.5)<a class="citation" href="#EGAI2">(Grothendieck and Dieudonné 1971)</a>).
+Let $f: X \to Y$ be a morphism of schemes.
+If the direct-image sheaf $f_\ast\mathcal{O}_X$ is a quasi-coherent $\mathcal{O}_Y$-module (this is the case when $f$ is quasi-compact and quasi-separated), then the scheme-theoretic image of $Y’ \subseteq Y$ of $X$ under $f$ exists.
+The scheme-theoretic image $Y’$ contains $\overline{f(X)}$ as an underlying topological space, and in the factorization
+\[ X \xrightarrow{g} Y’ \xrightarrow{j} Z, \]
+where $j$ is the canonical immersion, $g$ is schematically dominant.</p>
+</blockquote>
+
+<p><em>Proof.</em> Note that $f$ is quasi-compact and quasi-separated, then  $f_\ast\mathcal{O}_X$ is a quasi-coherent $\mathcal{O}_Y$-module by <a href="https://stacks.math.columbia.edu/tag/01LC" rel="external nofollow noopener" target="_blank">Tag 01LC</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.
+By the assumption, the sheaf of ideal
+\[ \Jcal  = \ker(\Ocal_Y \to f_\ast \Ocal_X) \]
+is quasi-coherent (Prop.5.7(II)<a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>). 
+Let $Y’$ be the closed subscheme of $Y$ determined by $\Jcal$.
+It is easy to check that $Y’$ is the smallest by the construction.
+Because the morphism $\Ocal_Y / \Jcal \to f_\ast \Ocal_X$ is injective, the induced ring morphism $g : X \to Y’$ is schematically dominant.$\quad\square$</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Corollary.</strong> Let $X$ be a subscheme of a scheme $Y$, and let $j: X \to Y$ be the canonical injection.
+If $j_\ast(\Ocal_X)$ is a quasi-coherent $\Ocal_Y$-module (which is the case when $j$ is quasi-compact), then the scheme-theoretic closure $Y’$ of $X$ in $Y$ exists.
+The scheme-theoretic closure $Y’$ contains $\overline{X}$ as an underlying topological space, and $X$ is scheme-theoretically dense in $Y’$.</p>
+</blockquote>
+
+<p>As a last preparation step, we state some technical lemmas about generic points.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Lemma 2.</strong>
+Let $f:X \to Y$ be a morphism of schemes, and let $\eta$ be the generic point of an irreducible component of $Y$.
+Let $S$ be the set of all generic points of irreducible components of $X$.
+If $f^{-1}(\eta)$ is discrete, then $f^{-1}(\eta) \subseteq S$.</p>
+</blockquote>
+
+<p><em>Proof.</em> Let $\eta$ be the generic point of $Y$.
+Suppose that $x \in f^{-1}(\eta)$. Then there exists some generic point $\xi \in S$ such that $\xi \leadsto x$.
+Thus, we get $f(\xi) \leadsto \eta$, implying that $f(\xi) = \eta$.
+However, since $f^{-1}(\eta)$ is discrete, there is no non-trivial specialization in $f^{-1}(\eta)$, so we get $x = \xi$. This shows that $f^{-1}(\eta) \subseteq S$. $\quad\square$</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Lemma 3</strong> (<a href="https://stacks.math.columbia.edu/tag/02NE" rel="external nofollow noopener" target="_blank">Tag 02NE</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+Let $f:X \to Y$ be a quasi-compact morphism of schemes. Let $\eta \in Y$ be a generic point of an irreducible component of $Y$. If $\eta \notin f(X)$ then there exists an open neighborhood $V \subseteq Y$ of $\eta$ such that $f^{−1}(V)=\varnothing$.</p>
+</blockquote>
+
+<p>Now we state the main proposition of this post.</p>
+
+<blockquote class="blockquote border-start ps-3">
+  <p><strong>Proposition 3.</strong> Let \(f: X \to Y\) be separated and of finite type with \(Y\) irreducible and locally Noetherian.
+If the fiber over the generic point \(\eta \in Y\) is finite, then there is an open neighborhood \(V\) of \(\eta\) in \(Y\) such that \(f^{-1}(V) \to V\) is finite.</p>
+</blockquote>
+
+<p><em>Proof.</em> Consider the set
+\[ U \coloneqq \{ x \in X \mid f^{-1}(f(x)) \text{ is finite} \} \]
+(in fact, $U$ is open by (13.1.4)<a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a>).
+We claim that $\eta \notin \overline{f(X \setminus U)}$.
+If $\eta \in \overline{f(X \setminus U)}$, then $\overline{f(X \setminus U)} = Y$, so $f(X \setminus U)$ is dense in $Y$.
+However, a quasi-compact morphism is dominant if and only if all generic points of irreducible components are in the image of $f$ (<a href="https://stacks.math.columbia.edu/tag/01RL" rel="external nofollow noopener" target="_blank">Tag 01RL</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+Thus, we obtain $\eta \in f(X \setminus U)$, which is a contradiction.</p>
+
+<p>Remove the closed set $f\overline{(X \setminus U)}$ from $Y$ and shrink the remainder to an affine neighborhood of $\eta$. After this replacement we may assume that \(f: X \to Y\) is separated, quasi-finite, and of finite type, where \(Y\) is an irreducible Noetherian affine scheme with the generic point $\eta$. This also forces $X$ to be Noetherian (Exercise 3.13(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>). Thus, $X$ has finitely many irreducible components.</p>
+
+<p>Let $S = \{\xi_1, \ldots, \xi_r, \xi_{r+1}, \ldots, \xi_{r+s}\}$ be the set of generic points of all irreducible components of $X$, where $f^{-1}(\eta) = \{\xi_1, \ldots, \xi_r\}$.
+Let $C \coloneqq \overline{\{\xi_{r+1}, \ldots, \xi_{r+s}\}}$.
+Note that $\eta \notin f(C)$, since there must not be any non trivial specialization in $S$.
+Hence, there is an open neighborhood of $\eta$ such that the its preimage does not intersect with $C$. 
+Shrinking $Y$ to such an affine neighborhood of $\eta$, we may say that $f^{-1}(\eta) = \{\xi_1, \ldots, \xi_r\}$ is exactly the set of generic points of all irreducible components of $X$ (because irreducibility is preserved under restriction to non-empty open subsets, no new irreducible components appear.).</p>
+
+<p>Applying Zariski’s Main Theorem, we obtain the factorization $X \xrightarrow{j} Z \xrightarrow{g} Y$ of $f$, where $j$ is an open immersion and $g$ is finite.
+Since $f$ and $g$ are quasi-compact and $j$ is separated, the open immersion $j$ is also quasi-compact (see  <a href="https://stacks.math.columbia.edu/tag/01L7" rel="external nofollow noopener" target="_blank">Tag 01L7</a> and <a href="https://stacks.math.columbia.edu/tag/03GI" rel="external nofollow noopener" target="_blank">Tag 03GI</a> of <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+Let $Z’$ be the scheme-theoretic image of $X$ under $j$.
+Then we get the following factorization
+\[ X \xrightarrow{j} Z’ \xrightarrow{g’} Y, \]
+where $j$ is a scheme-theoretically dominant open immersion, and $g’$ is finite.
+Let $(g’)^{-1}(\eta) = \{\zeta_1, \ldots, \zeta_r, \zeta_{r+1}, \ldots, \zeta_{r+t}\}$, where $\zeta_i = j(\xi_i)$ for $1 \le i \le r$.
+However, since $\overline{j(X)} = Z’$, we have $\overline{\{\zeta_1, \ldots, \zeta_r\}} = Z’$, so $(g’)^{-1}(\eta) = \{\zeta_1, \ldots, \zeta_r\}$ by Lemma 2.
+Because $ Z’\setminus j(X)$ is closed in $Z’$, its image $g’(Z\setminus j(X) )$ is also closed in $Y$.
+Note that $(g’)^{-1}(\eta)$ and $f^{-1}(\eta)$ are isomorphic; therefore, $\eta$ is not in $g’(Z\setminus j(X) )$.
+Take $V \coloneqq Y \setminus g’(Z\setminus j(X) )$.
+Then the induced map $(g’)^{-1}(V) \to V$ is still finite, and $f^{-1}(V) \to (g’)^{-1}(V)$ is an isomorphism.
+This ends the proof. $\quad\square$</p>
+
+<p><br></p>
+
+<p><strong>Acknowledgment</strong>
+I would like to thank my friend Jungwoo Park for her helpful discussions and suggestions while writing this post.</p>
+
+<p><br></p>
+
+<h2 class="references" id="references">References</h2>
+<ol class="bibliography">
+<li>
+<span id="EGAIV_3">Grothendieck, Alexander. 1966. “Éléments De Géométrie Algébrique : IV. Étude Locale Des Schémas Et Des Morphismes De Schémas, Troisième Partie.” <i>Publications Mathématiques De l’IHÉS</i> 28. Institut des Hautes Études Scientifiques: 5–255. <a href="https://www.numdam.org/item/PMIHES_1966__28__5_0/" target="_blank" rel="noopener">https://www.numdam.org/item/PMIHES_1966__28__5_0/</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="EGAI2">Grothendieck, Alexandre, and Jean A. Dieudonné. 1971. <i>Éléments De Géométrie Algébrique. I: Le Langage Des Schémas</i>. 2nd ed. Vol. 166. Grundlehren Der Mathematischen Wissenschaften. Berlin and New York: Springer-Verlag.</span><span class="badges"></span>
+</li>
+<li>
+<span id="Hartshorne1977">Hartshorne, Robin. 1977. <i>Algebraic Geometry</i>. 1st ed. Vol. 52. Graduate Texts in Mathematics. New York, NY: Springer New York. <a href="https://doi.org/10.1007/978-1-4757-3849-0" target="_blank" rel="noopener">https://doi.org/10.1007/978-1-4757-3849-0</a>.</span><span class="badges"></span>
+</li>
+<li>
+<span id="stacks-project">The Stacks project authors. 2025. “The Stacks Project.” <a href="https://stacks.math.columbia.edu" target="_blank" rel="noopener">https://stacks.math.columbia.edu</a>.</span><span class="badges"></span>
+</li>
+</ol>
+
+<script src="https://giscus.app/client.js" data-repo="ijhlee0511/ijhlee0511.github.io" data-repo-id="R_kgDOJqjmWQ" data-category="General" data-category-id="DIC_kwDOJqjmWc4CX-qZ" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
+</script>
+
+
+    </div>
+  </article>
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2025 Jaehyeon  Lee. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRB8KDG4TV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NRB8KDG4TV');
+  </script>
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+
+  </body>
+</html>
