@@ -6,12 +6,6 @@ nav: true
 nav_order: 1
 ---
 
-### Research Interests
-
-My research is in **Arithmetic Geometry**. I am broadly interested in:
-
-- **p-adic Hodge theory**
-
-### Publication List
+#### Publication List
 
 - no publication yet
