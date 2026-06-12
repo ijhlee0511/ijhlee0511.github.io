@@ -7,7 +7,7 @@ subtitle:
 
 These are solutions to Exercise problems of “Introduction to Commutative Algebra" written by M. F. Atiyah and I. G. MacDonald.
 
-**<span style="color:red">WARNING</span>** This solutions are written for self-study purposes and to consolidate my understanding. **I do not take responsibility for any disadvantages resulting from the use of this solution. It is at your own risk**. 
+**<span style="color:red">WARNING</span>** These solutions were written for self-study purposes and to consolidate my understanding when I was an undergraduate student. **I do not take responsibility for any disadvantages resulting from the use of this solution. It is at your own risk**. 
 If you find any typos or errors in this solution, please leave a comment in the section below (GitHub account required)
 or contact me via email at [ijhlee0511@gmail.com](mailto:ijhlee0511@gmail.com) or [ijhlee0511@kaist.ac.kr](mailto:ijhlee0511@kaist.ac.kr)
 

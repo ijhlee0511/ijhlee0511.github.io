@@ -10,12 +10,18 @@ profile:
   image_circular: false # crops the image to make it circular
 
 news: false  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
+latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
-Welcome to my blog! I'm an undergraduate student at [KAIST](https://www.kaist.ac.kr/kr/) (Korea Advanced Institute of Science and Technology) in South Korea
-majoring in mathematics.
+I am currently an MS/PhD student in the [Department of Mathematical Sciences](https://mathsci.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/kr/) (Korea Advanced Institute of Science and Technology), working under the supervision of [Wansu Kim](https://sites.google.com/site/wansukimmaths/).
 
-The goal of this blog is to consolidate my math knowledge and provide valuable insights into number theory and algebra. I'll be posting about various topics, including intriguing concepts, problem-solving techniques, and solutions to exercises from textbooks.
+My research area is **Arithmetic Geometry**, with particular interests in p-adic Hodge theory.
 
+My email address is: [jaehyeon dot math at gmail dot com](mailto:jaehyeon.math@gmail.com).
+
+
+#### Education
+- **MS/PhD in Mathematics**, KAIST (2025 – present)
+  - Advisor: [Wansu Kim](https://sites.google.com/site/wansukimmaths/)
+- **BS in Mathematics**, KAIST (2021 – 2025)
