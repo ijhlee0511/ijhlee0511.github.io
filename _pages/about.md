@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle:
 
@@ -16,9 +16,9 @@ social: false  # includes social icons at the bottom of the page
 ---
 I am currently an MS/PhD student in the [Department of Mathematical Sciences](https://mathsci.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/kr/) (Korea Advanced Institute of Science and Technology), working under the supervision of [Wansu Kim](https://sites.google.com/site/wansukimmaths/).
 
-My research area is **Arithmetic Geometry**, with particular interests in p-adic Hodge theory.
+My research area is **Arithmetic Geometry**.
 
-My email address is: [jaehyeon dot math at gmail dot com](mailto:jaehyeon.math@gmail.com).
+My email address is: [jaehyeon [dot] math [at] gmail [dot] com](mailto:jaehyeon.math@gmail.com).
 
 
 #### Education
