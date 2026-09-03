@@ -596,25 +596,32 @@
     </choose>
   </macro>
   <citation collapse="year" disambiguate-add-givenname="true" disambiguate-add-names="true" disambiguate-add-year-suffix="true" et-al-min="4" et-al-use-first="1" givenname-disambiguation-rule="primary-name">
-    <layout delimiter="; " prefix="(" suffix=")">
-      <group delimiter=", ">
-        <choose>
-          <if match="any" variable="issued accessed">
-            <group delimiter=" ">
-              <text macro="contributors-short"/>
-              <text macro="date-in-text"/>
-            </group>
-          </if>
-          <!---comma before forthcoming and n.d.-->
-          <else>
-            <group delimiter=", ">
-              <text macro="contributors-short"/>
-              <text macro="date-in-text"/>
-            </group>
-          </else>
-        </choose>
-        <text macro="point-locators"/>
-      </group>
+    <layout delimiter="; ">
+      <choose>
+        <if variable="citation-label">
+          <text variable="citation-label"/>
+        </if>
+        <else>
+          <group delimiter=", " prefix="(" suffix=")">
+            <choose>
+              <if match="any" variable="issued accessed">
+                <group delimiter=" ">
+                  <text macro="contributors-short"/>
+                  <text macro="date-in-text"/>
+                </group>
+              </if>
+              <!---comma before forthcoming and n.d.-->
+              <else>
+                <group delimiter=", ">
+                  <text macro="contributors-short"/>
+                  <text macro="date-in-text"/>
+                </group>
+              </else>
+            </choose>
+            <text macro="point-locators"/>
+          </group>
+        </else>
+      </choose>
     </layout>
   </citation>
   <bibliography entry-spacing="0" et-al-min="11" et-al-use-first="7" hanging-indent="true" subsequent-author-substitute="&#8212;&#8212;&#8212;">

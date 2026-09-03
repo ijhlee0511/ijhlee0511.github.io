@@ -4,6 +4,10 @@
 
 // Typography
 
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
 p,
 h1,
 h2,
@@ -777,6 +781,8 @@ html.transition *:after {
   }
 
   .post-content {
+    text-align: justify;
+
     blockquote {
       border-left: 5px solid var(--global-theme-color);
       padding: 8px;

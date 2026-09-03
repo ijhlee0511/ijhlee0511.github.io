@@ -1,0 +1,44 @@
+<script>
+// Auto-numbers theorem-like environments (Lemma, Proposition, Theorem, ...)
+// and resolves cross-reference citations, LaTeX \label{}/\ref{}-style.
+//
+// Usage in markdown:
+//   >**Lemma <span class="thm-num"></span>.** statement...
+//   {: #my-label .blockquote .border-start .ps-3 data-env="lemma"}
+//
+//   By <a class="thm-ref" data-ref="my-label"></a>, ...
+document.addEventListener('DOMContentLoaded', function () {
+  var envs = document.querySelectorAll('.post-content [data-env]');
+  if (!envs.length) return;
+
+  var counters = {};
+  var registry = {};
+
+  envs.forEach(function (el) {
+    var type = el.dataset.env.toLowerCase();
+    counters[type] = (counters[type] || 0) + 1;
+    var number = counters[type];
+
+    if (!el.id) {
+      el.id = type + '-' + number;
+    }
+
+    var numEl = el.querySelector('.thm-num');
+    if (numEl) numEl.textContent = number;
+
+    registry[el.id] = { type: type, number: number };
+  });
+
+  var refs = document.querySelectorAll('.post-content [data-ref]');
+  refs.forEach(function (el) {
+    var entry = registry[el.dataset.ref];
+    if (!entry) {
+      console.warn('theorem-numbering: no environment found for label "' + el.dataset.ref + '"');
+      return;
+    }
+    var label = entry.type.charAt(0).toUpperCase() + entry.type.slice(1) + ' ' + entry.number;
+    el.textContent = label;
+    if (el.tagName === 'A') el.href = '#' + el.dataset.ref;
+  });
+});
+</script>

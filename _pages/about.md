@@ -14,7 +14,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-I am currently an MS/PhD student in the [Department of Mathematical Sciences](https://mathsci.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/kr/) (Korea Advanced Institute of Science and Technology), working under the supervision of [Wansu Kim](https://sites.google.com/site/wansukimmaths/).
+I am currently an MS/PhD student in the [Department of Mathematical Sciences](https://mathsci.kaist.ac.kr/home/en/) at [KAIST](https://www.kaist.ac.kr/en/) (Korea Advanced Institute of Science and Technology), working under the supervision of [Wansu Kim](https://sites.google.com/site/wansukimmaths/).
 
 My research area is **Arithmetic Geometry**.
 
