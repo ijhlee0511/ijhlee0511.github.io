@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ijhlee0511.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ijhlee0511.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-07-16T05:05:08+00:00</updated><id>https://ijhlee0511.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ijhlee0511.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ijhlee0511.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-09-03T03:59:58+00:00</updated><id>https://ijhlee0511.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">On Quasi-finite Morphisms (Part 2)</title><link href="https://ijhlee0511.github.io/blog/2025/AG-post-2/" rel="alternate" type="text/html" title="On Quasi-finite Morphisms (Part 2)" /><published>2025-07-25T00:00:00+00:00</published><updated>2025-07-25T00:00:00+00:00</updated><id>https://ijhlee0511.github.io/blog/2025/AG-post-2</id><content type="html" xml:base="https://ijhlee0511.github.io/blog/2025/AG-post-2/"><![CDATA[<p>In this post, we continue our discussion of the application of Zariski’s Main Theorem, following ‘<a href="/blog/2025/AG-post-1/" target="_blank">On Quasi-finite Morphisms (Part 1)</a>’.</p>
 
 <p>Let’s recall Grothendieck’s 2nd version of Zariski’s Main Theorem.</p>
@@ -8,7 +8,7 @@
 Let $Y$ be a quasi-compact and quasi-separated scheme.
 If $f : X \to Y$ is quasi-finite, separated, and of finite presentation, then $f$ factors as $X \xrightarrow{f’} Y’ \xrightarrow{u} Y $, where $f’$ is an open immersion and $u$ is a finite morphism.</p>
 </blockquote>
-<p><em>Proof.</em> The proof requires a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ">Tag 02LQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+<p><em>Proof.</em> The proof requires a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ">Tag 02LQ</a><a class="citation" href="#stacks-project">Stacks</a>.$\quad\square$</p>
 
 <p>The goal of this post is to show the following: if a separated morphism of finite type has a finite generic fiber, then it is ‘generically finite’.</p>
 
@@ -24,7 +24,7 @@ An <strong>irreducible component</strong> of a topological space is a maximal ir
   <p><strong>Proposition 1.</strong>
 Let $X$ be a scheme. Any irreducible closed subset of $X$ has a unique generic point.</p>
 </blockquote>
-<p><em>Proof.</em> See Exercise 2.9(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a> or <a href="https://stacks.math.columbia.edu/tag/01IS">Tag 01IS</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>. $\quad\square$</p>
+<p><em>Proof.</em> See Exercise 2.9(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a> or <a href="https://stacks.math.columbia.edu/tag/01IS">Tag 01IS</a><a class="citation" href="#stacks-project">Stacks</a>. $\quad\square$</p>
 
 <p>To deal with questions about generic points, let’s recall the concepts of specialization and generalization</p>
 
@@ -77,7 +77,7 @@ The scheme-theoretic image $Y’$ contains $\overline{f(X)}$ as an underlying to
 where $j$ is the canonical immersion, $g$ is scheme-theoretically dominant.</p>
 </blockquote>
 
-<p><em>Proof.</em> Note that $f$ is quasi-compact and quasi-separated, then  $f_\ast\mathcal{O}_X$ is a quasi-coherent $\mathcal{O}_Y$-module by <a href="https://stacks.math.columbia.edu/tag/01LC">Tag 01LC</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.
+<p><em>Proof.</em> Note that $f$ is quasi-compact and quasi-separated, then  $f_\ast\mathcal{O}_X$ is a quasi-coherent $\mathcal{O}_Y$-module by <a href="https://stacks.math.columbia.edu/tag/01LC">Tag 01LC</a> <a class="citation" href="#stacks-project">Stacks</a>.
 By the assumption, the sheaf of ideal
 \[ \Jcal  = \ker(\Ocal_Y \to f_\ast \Ocal_X) \]
 is quasi-coherent (Prop.5.7(II)<a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>). 
@@ -106,7 +106,7 @@ Thus, we get $f(\xi) \leadsto \eta$, implying that $f(\xi) = \eta$.
 However, since $f^{-1}(\eta)$ is discrete, there is no non-trivial specialization in $f^{-1}(\eta)$, so we get $x = \xi$. This shows that $f^{-1}(\eta) \subseteq S$. $\quad\square$</p>
 
 <blockquote class="blockquote border-start ps-3">
-  <p><strong>Lemma 3</strong> (<a href="https://stacks.math.columbia.edu/tag/02NE">Tag 02NE</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+  <p><strong>Lemma 3</strong> (<a href="https://stacks.math.columbia.edu/tag/02NE">Tag 02NE</a><a class="citation" href="#stacks-project">Stacks</a>).
 Let $f:X \to Y$ be a quasi-compact morphism of schemes. Let $\eta \in Y$ be a generic point of an irreducible component of $Y$. If $\eta \notin f(X)$ then there exists an open neighborhood $V \subseteq Y$ of $\eta$ such that $f^{−1}(V)=\varnothing$.</p>
 </blockquote>
 
@@ -122,7 +122,7 @@ If the fiber over the generic point \(\eta \in Y\) is finite, then there is an o
 (in fact, $U$ is open by (13.1.4)<a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a>).
 We claim that $\eta \notin \overline{f(X \setminus U)}$.
 If $\eta \in \overline{f(X \setminus U)}$, then $\overline{f(X \setminus U)} = Y$, so $f(X \setminus U)$ is dense in $Y$.
-However, a quasi-compact morphism is dominant if and only if all generic points of irreducible components are in the image of $f$ (<a href="https://stacks.math.columbia.edu/tag/01RL">Tag 01RL</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+However, a quasi-compact morphism is dominant if and only if all generic points of irreducible components are in the image of $f$ (<a href="https://stacks.math.columbia.edu/tag/01RL">Tag 01RL</a><a class="citation" href="#stacks-project">Stacks</a>).
 Thus, we obtain $\eta \in f(X \setminus U)$, which is a contradiction.</p>
 
 <p>Remove the closed set $f\overline{(X \setminus U)}$ from $Y$ and shrink the remainder to an affine neighborhood of $\eta$. After this replacement we may assume that \(f: X \to Y\) is separated, quasi-finite, and of finite type, where \(Y\) is an irreducible Noetherian affine scheme with the generic point $\eta$. This also forces $X$ to be Noetherian (Exercise 3.13(II) of <a class="citation" href="#Hartshorne1977">(Hartshorne 1977)</a>). Thus, $X$ has finitely many irreducible components.</p>
@@ -134,7 +134,7 @@ Hence, there is an open neighborhood of $\eta$ such that the its preimage does n
 Shrinking $Y$ to such an affine neighborhood of $\eta$, we may say that $f^{-1}(\eta) = \{\xi_1, \ldots, \xi_r\}$ is exactly the set of generic points of all irreducible components of $X$ (because irreducibility is preserved under restriction to non-empty open subsets, no new irreducible components appear.).</p>
 
 <p>Applying Zariski’s Main Theorem, we obtain the factorization $X \xrightarrow{j} Z \xrightarrow{g} Y$ of $f$, where $j$ is an open immersion and $g$ is finite.
-Since $f$ and $g$ are quasi-compact and $j$ is separated, the open immersion $j$ is also quasi-compact (see  <a href="https://stacks.math.columbia.edu/tag/01L7">Tag 01L7</a> and <a href="https://stacks.math.columbia.edu/tag/03GI">Tag 03GI</a> of <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+Since $f$ and $g$ are quasi-compact and $j$ is separated, the open immersion $j$ is also quasi-compact (see  <a href="https://stacks.math.columbia.edu/tag/01L7">Tag 01L7</a> and <a href="https://stacks.math.columbia.edu/tag/03GI">Tag 03GI</a> of <a class="citation" href="#stacks-project">Stacks</a>).
 Let $Z’$ be the scheme-theoretic image of $X$ under $j$.
 Then we get the following factorization
 \[ X \xrightarrow{j} Z’ \xrightarrow{g’} Y, \]
@@ -204,8 +204,8 @@ For example, for (3), reducing to the local case, we need to show the following:
 <blockquote class="blockquote border-start ps-3">
   <p><strong>Proposition 2.</strong> Any finite morphism \(f : X \to Y\) is proper, that is, it is separated, of finite type, and universally closed.</p>
 </blockquote>
-<p><em>Proof.</em> It is known that every affine morphism is separated (<a href="https://stacks.math.columbia.edu/tag/01S7">Tag 01S7</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>), so every finite morphism is automatically separated.
-By the “going up” theorem, one can easily show that every integral morphism is universally closed (<a href="https://stacks.math.columbia.edu/tag/01WM">Tag 01WM</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).$\quad\square$</p>
+<p><em>Proof.</em> It is known that every affine morphism is separated (<a href="https://stacks.math.columbia.edu/tag/01S7">Tag 01S7</a> <a class="citation" href="#stacks-project">Stacks</a>), so every finite morphism is automatically separated.
+By the “going up” theorem, one can easily show that every integral morphism is universally closed (<a href="https://stacks.math.columbia.edu/tag/01WM">Tag 01WM</a> <a class="citation" href="#stacks-project">Stacks</a>).$\quad\square$</p>
 
 <h3 id="quasi-finite-morphisms"><strong>2. Quasi-Finite Morphisms</strong></h3>
 
@@ -297,7 +297,7 @@ in \(K\), so we get \(c\pi_{\pfr} = b_1^{e_1} \cdots b_n^{e_n}\), a contradictio
 <blockquote class="blockquote border-start ps-3">
   <p><strong>Proposition 3.</strong> Let $f: X \to Y$ be a morphism of schemes. Then $f$ is finite if and only if $f$ is proper and quasi-finite.</p>
 </blockquote>
-<p><em>Proof.</em> See (8.11.1)<a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> under the assumption that the morphism is locally of finite presentation, or <a href="https://stacks.math.columbia.edu/tag/02LS">Tag 02LS</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a> for any morphism (in fact, we can prove it using Zariski’s Main Theorem). $\quad\square$</p>
+<p><em>Proof.</em> See (8.11.1)<a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> under the assumption that the morphism is locally of finite presentation, or <a href="https://stacks.math.columbia.edu/tag/02LS">Tag 02LS</a> <a class="citation" href="#stacks-project">Stacks</a> for any morphism (in fact, we can prove it using Zariski’s Main Theorem). $\quad\square$</p>
 
 <p>Proposition 3 is extremely useful in practice. 
 In general, showing directly that a morphism is finite is not easy.
@@ -342,7 +342,7 @@ Nevertheless, Grothendieck added definitions of quasi-finiteness in local sense 
 The set \(U\) of points of \(X\) where \(f\) is quasi-finite is open in \(X\).
 The induced morphism \(U\) is locally quasi-finite.</p>
 </blockquote>
-<p><em>Proof.</em> See <a href="https://stacks.math.columbia.edu/tag/01TI">Tag 01TI</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+<p><em>Proof.</em> See <a href="https://stacks.math.columbia.edu/tag/01TI">Tag 01TI</a> <a class="citation" href="#stacks-project">Stacks</a>.$\quad\square$</p>
 
 <p>I think he might realize that ‘quasi-finite at a point’ is a useful notion in practice when applying theorems about quasi-finite morphisms.</p>
 
@@ -381,7 +381,7 @@ Denote by $X’$ the set of points $x \in X$ that are isolated in their fiber, i
 Let $Y$ be a quasi-compact and quasi-separated scheme.
 If $f : X \to Y$ is quasi-finite, separated, and of finite presentation, then $f$ factors as $X \xrightarrow{f’} Y’ \xrightarrow{u} Y $, where $f’$ is an open immersion and $u$ is a finite morphism.</p>
 </blockquote>
-<p><em>Proof.</em> The proof demands a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ">Tag 02LQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+<p><em>Proof.</em> The proof demands a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ">Tag 02LQ</a><a class="citation" href="#stacks-project">Stacks</a>.$\quad\square$</p>
 
 <p>The theorem says that quasi-finite morphisms are essentially “almost finite” morphisms. Since quasi-finite morphisms arise naturally in several circumstances, Zariski’s Main Theorem enables us to apply powerful theories (e.g., étale cohomology theory).
 We close this post with two toy applications of Zariski’s Main Theorem.
@@ -391,9 +391,9 @@ The first example is a proof of Proposition 3.</p>
 Let \(f = u \circ f’\) be the factorization as in Zariski’s Main Theorem.
 Since the composite of two finite morphisms is finite, it suffices to show that \(f’\) is finite.
 Consider the graph morphism \(\Gamma_{f’}: X \to X \times_X Y’\) defined by \(x \mapsto (x,f’(x))\).
-It is known that any graph of a separated morphism is a closed immersion (<a href="https://stacks.math.columbia.edu/tag/024T">Tag 024T</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a> or (5.2.4)<a class="citation" href="#EGAI2">(Grothendieck and Dieudonné 1971)</a>, so \(\Gamma_{f’}\) is a closed immersion (hence finite and proper).
+It is known that any graph of a separated morphism is a closed immersion (<a href="https://stacks.math.columbia.edu/tag/024T">Tag 024T</a><a class="citation" href="#stacks-project">Stacks</a> or (5.2.4)<a class="citation" href="#EGAI2">(Grothendieck and Dieudonné 1971)</a>, so \(\Gamma_{f’}\) is a closed immersion (hence finite and proper).
 Thus, \(f’\) is proper, since \(f’ = p_{Y’} \circ \Gamma_f\) with the projection \( p_{Y’} : X \times_X Y’ \to Y’ \).
-This shows that \(f’\) is an immersion with a closed image, that is, a closed immersion (<a href="https://stacks.math.columbia.edu/tag/01IQ">Tag 01IQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+This shows that \(f’\) is an immersion with a closed image, that is, a closed immersion (<a href="https://stacks.math.columbia.edu/tag/01IQ">Tag 01IQ</a><a class="citation" href="#stacks-project">Stacks</a>).
 This ends the proof.$\quad\square$</p>
 
 <blockquote class="blockquote border-start ps-3">

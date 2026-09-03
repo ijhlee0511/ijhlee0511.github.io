@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -182,6 +183,10 @@ window.MathJax = {
 }
 
   },
+  chtml: {
+    // Scales rendered math down to better match the body font size
+    scale: 0.8
+  },
   options: {
     // Prevents MathJax from processing content within these HTML tags
     skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
@@ -323,8 +328,8 @@ For example, for (3), reducing to the local case, we need to show the following:
 <blockquote class="blockquote border-start ps-3">
   <p><strong>Proposition 2.</strong> Any finite morphism \(f : X \to Y\) is proper, that is, it is separated, of finite type, and universally closed.</p>
 </blockquote>
-<p><em>Proof.</em> It is known that every affine morphism is separated (<a href="https://stacks.math.columbia.edu/tag/01S7" rel="external nofollow noopener" target="_blank">Tag 01S7</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>), so every finite morphism is automatically separated.
-By the “going up” theorem, one can easily show that every integral morphism is universally closed (<a href="https://stacks.math.columbia.edu/tag/01WM" rel="external nofollow noopener" target="_blank">Tag 01WM</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).$\quad\square$</p>
+<p><em>Proof.</em> It is known that every affine morphism is separated (<a href="https://stacks.math.columbia.edu/tag/01S7" rel="external nofollow noopener" target="_blank">Tag 01S7</a> <a class="citation" href="#stacks-project">Stacks</a>), so every finite morphism is automatically separated.
+By the “going up” theorem, one can easily show that every integral morphism is universally closed (<a href="https://stacks.math.columbia.edu/tag/01WM" rel="external nofollow noopener" target="_blank">Tag 01WM</a> <a class="citation" href="#stacks-project">Stacks</a>).$\quad\square$</p>
 
 <h3 id="quasi-finite-morphisms"><strong>2. Quasi-Finite Morphisms</strong></h3>
 
@@ -416,7 +421,7 @@ in \(K\), so we get \(c\pi_{\pfr} = b_1^{e_1} \cdots b_n^{e_n}\), a contradictio
 <blockquote class="blockquote border-start ps-3">
   <p><strong>Proposition 3.</strong> Let $f: X \to Y$ be a morphism of schemes. Then $f$ is finite if and only if $f$ is proper and quasi-finite.</p>
 </blockquote>
-<p><em>Proof.</em> See (8.11.1)<a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> under the assumption that the morphism is locally of finite presentation, or <a href="https://stacks.math.columbia.edu/tag/02LS" rel="external nofollow noopener" target="_blank">Tag 02LS</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a> for any morphism (in fact, we can prove it using Zariski’s Main Theorem). $\quad\square$</p>
+<p><em>Proof.</em> See (8.11.1)<a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> under the assumption that the morphism is locally of finite presentation, or <a href="https://stacks.math.columbia.edu/tag/02LS" rel="external nofollow noopener" target="_blank">Tag 02LS</a> <a class="citation" href="#stacks-project">Stacks</a> for any morphism (in fact, we can prove it using Zariski’s Main Theorem). $\quad\square$</p>
 
 <p>Proposition 3 is extremely useful in practice. 
 In general, showing directly that a morphism is finite is not easy.
@@ -461,7 +466,7 @@ Nevertheless, Grothendieck added definitions of quasi-finiteness in local sense 
 The set \(U\) of points of \(X\) where \(f\) is quasi-finite is open in \(X\).
 The induced morphism \(U\) is locally quasi-finite.</p>
 </blockquote>
-<p><em>Proof.</em> See <a href="https://stacks.math.columbia.edu/tag/01TI" rel="external nofollow noopener" target="_blank">Tag 01TI</a> <a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+<p><em>Proof.</em> See <a href="https://stacks.math.columbia.edu/tag/01TI" rel="external nofollow noopener" target="_blank">Tag 01TI</a> <a class="citation" href="#stacks-project">Stacks</a>.$\quad\square$</p>
 
 <p>I think he might realize that ‘quasi-finite at a point’ is a useful notion in practice when applying theorems about quasi-finite morphisms.</p>
 
@@ -500,7 +505,7 @@ Denote by $X’$ the set of points $x \in X$ that are isolated in their fiber, i
 Let $Y$ be a quasi-compact and quasi-separated scheme.
 If $f : X \to Y$ is quasi-finite, separated, and of finite presentation, then $f$ factors as $X \xrightarrow{f’} Y’ \xrightarrow{u} Y $, where $f’$ is an open immersion and $u$ is a finite morphism.</p>
 </blockquote>
-<p><em>Proof.</em> The proof demands a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ" rel="external nofollow noopener" target="_blank">Tag 02LQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>.$\quad\square$</p>
+<p><em>Proof.</em> The proof demands a deep understanding of the underlying mathematics. See 8.12 of <a class="citation" href="#EGAIV_3">(Grothendieck 1966)</a> or <a href="https://stacks.math.columbia.edu/tag/02LQ" rel="external nofollow noopener" target="_blank">Tag 02LQ</a><a class="citation" href="#stacks-project">Stacks</a>.$\quad\square$</p>
 
 <p>The theorem says that quasi-finite morphisms are essentially “almost finite” morphisms. Since quasi-finite morphisms arise naturally in several circumstances, Zariski’s Main Theorem enables us to apply powerful theories (e.g., étale cohomology theory).
 We close this post with two toy applications of Zariski’s Main Theorem.
@@ -510,9 +515,9 @@ The first example is a proof of Proposition 3.</p>
 Let \(f = u \circ f’\) be the factorization as in Zariski’s Main Theorem.
 Since the composite of two finite morphisms is finite, it suffices to show that \(f’\) is finite.
 Consider the graph morphism \(\Gamma_{f’}: X \to X \times_X Y’\) defined by \(x \mapsto (x,f’(x))\).
-It is known that any graph of a separated morphism is a closed immersion (<a href="https://stacks.math.columbia.edu/tag/024T" rel="external nofollow noopener" target="_blank">Tag 024T</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a> or (5.2.4)<a class="citation" href="#EGAI2">(Grothendieck and Dieudonné 1971)</a>, so \(\Gamma_{f’}\) is a closed immersion (hence finite and proper).
+It is known that any graph of a separated morphism is a closed immersion (<a href="https://stacks.math.columbia.edu/tag/024T" rel="external nofollow noopener" target="_blank">Tag 024T</a><a class="citation" href="#stacks-project">Stacks</a> or (5.2.4)<a class="citation" href="#EGAI2">(Grothendieck and Dieudonné 1971)</a>, so \(\Gamma_{f’}\) is a closed immersion (hence finite and proper).
 Thus, \(f’\) is proper, since \(f’ = p_{Y’} \circ \Gamma_f\) with the projection \( p_{Y’} : X \times_X Y’ \to Y’ \).
-This shows that \(f’\) is an immersion with a closed image, that is, a closed immersion (<a href="https://stacks.math.columbia.edu/tag/01IQ" rel="external nofollow noopener" target="_blank">Tag 01IQ</a><a class="citation" href="#stacks-project">(The Stacks project authors 2025)</a>).
+This shows that \(f’\) is an immersion with a closed image, that is, a closed immersion (<a href="https://stacks.math.columbia.edu/tag/01IQ" rel="external nofollow noopener" target="_blank">Tag 01IQ</a><a class="citation" href="#stacks-project">Stacks</a>).
 This ends the proof.$\quad\square$</p>
 
 <blockquote class="blockquote border-start ps-3">
@@ -697,6 +702,51 @@ Let $V$ be an affine open of $Y$. Then $u^{-1}(V)$ is an affine open of $Y’$, 
   function getWidthPercentage() {
     return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
   }
+</script>
+
+    <script>
+// Auto-numbers theorem-like environments (Lemma, Proposition, Theorem, ...)
+// and resolves cross-reference citations, LaTeX \label{}/\ref{}-style.
+//
+// Usage in markdown:
+//   >**Lemma <span class="thm-num"></span>.** statement...
+//   {: #my-label .blockquote .border-start .ps-3 data-env="lemma"}
+//
+//   By <a class="thm-ref" data-ref="my-label"></a>, ...
+document.addEventListener('DOMContentLoaded', function () {
+  var envs = document.querySelectorAll('.post-content [data-env]');
+  if (!envs.length) return;
+
+  var counters = {};
+  var registry = {};
+
+  envs.forEach(function (el) {
+    var type = el.dataset.env.toLowerCase();
+    counters[type] = (counters[type] || 0) + 1;
+    var number = counters[type];
+
+    if (!el.id) {
+      el.id = type + '-' + number;
+    }
+
+    var numEl = el.querySelector('.thm-num');
+    if (numEl) numEl.textContent = number;
+
+    registry[el.id] = { type: type, number: number };
+  });
+
+  var refs = document.querySelectorAll('.post-content [data-ref]');
+  refs.forEach(function (el) {
+    var entry = registry[el.dataset.ref];
+    if (!entry) {
+      console.warn('theorem-numbering: no environment found for label "' + el.dataset.ref + '"');
+      return;
+    }
+    var label = entry.type.charAt(0).toUpperCase() + entry.type.slice(1) + ' ' + entry.number;
+    el.textContent = label;
+    if (el.tagName === 'A') el.href = '#' + el.dataset.ref;
+  });
+});
 </script>
 
 

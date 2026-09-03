@@ -126,6 +126,10 @@ body.sticky-bottom-footer {
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
 p,
 h1,
 h2,
@@ -731,6 +735,9 @@ html.transition *:after {
 }
 .post .post-tags a:hover {
   color: var(--global-theme-color);
+}
+.post .post-content {
+  text-align: justify;
 }
 .post .post-content blockquote {
   border-left: 5px solid var(--global-theme-color);

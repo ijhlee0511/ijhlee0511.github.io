@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -181,6 +182,10 @@ window.MathJax = {
   Spec: '\\operatorname{Spec}'
 }
 
+  },
+  chtml: {
+    // Scales rendered math down to better match the body font size
+    scale: 0.8
   },
   options: {
     // Prevents MathJax from processing content within these HTML tags
@@ -549,6 +554,51 @@ However, their less intuitive topological behaviors make room for rich algebraic
   function getWidthPercentage() {
     return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
   }
+</script>
+
+    <script>
+// Auto-numbers theorem-like environments (Lemma, Proposition, Theorem, ...)
+// and resolves cross-reference citations, LaTeX \label{}/\ref{}-style.
+//
+// Usage in markdown:
+//   >**Lemma <span class="thm-num"></span>.** statement...
+//   {: #my-label .blockquote .border-start .ps-3 data-env="lemma"}
+//
+//   By <a class="thm-ref" data-ref="my-label"></a>, ...
+document.addEventListener('DOMContentLoaded', function () {
+  var envs = document.querySelectorAll('.post-content [data-env]');
+  if (!envs.length) return;
+
+  var counters = {};
+  var registry = {};
+
+  envs.forEach(function (el) {
+    var type = el.dataset.env.toLowerCase();
+    counters[type] = (counters[type] || 0) + 1;
+    var number = counters[type];
+
+    if (!el.id) {
+      el.id = type + '-' + number;
+    }
+
+    var numEl = el.querySelector('.thm-num');
+    if (numEl) numEl.textContent = number;
+
+    registry[el.id] = { type: type, number: number };
+  });
+
+  var refs = document.querySelectorAll('.post-content [data-ref]');
+  refs.forEach(function (el) {
+    var entry = registry[el.dataset.ref];
+    if (!entry) {
+      console.warn('theorem-numbering: no environment found for label "' + el.dataset.ref + '"');
+      return;
+    }
+    var label = entry.type.charAt(0).toUpperCase() + entry.type.slice(1) + ' ' + entry.number;
+    el.textContent = label;
+    if (el.tagName === 'A') el.href = '#' + el.dataset.ref;
+  });
+});
 </script>
 
 
